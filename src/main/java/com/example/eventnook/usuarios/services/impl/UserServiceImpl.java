@@ -10,7 +10,7 @@ import com.example.eventnook.usuarios.exceptions.UserNotFoundException;
 import com.example.eventnook.usuarios.models.dto.RegistrationFormDTO;
 import com.example.eventnook.usuarios.models.dto.UserDTO;
 import com.example.eventnook.usuarios.models.dto.UserPatchDTO;
-import com.example.eventnook.usuarios.models.mappers.UserDTOMapper;
+//import com.example.eventnook.usuarios.models.mappers.UserDTOMapper;
 import com.example.eventnook.usuarios.repositories.dao.UserRepository;
 import com.example.eventnook.usuarios.services.UserService;
 
@@ -22,10 +22,11 @@ public class UserServiceImpl implements UserService{
 
    /* @Autowired
     private EventService eventService;
-     */
+
 
      @Autowired
      private UserDTOMapper userDTOMapper;
+          */
 
      @Override
      public List<UserDTO> findAll() {
