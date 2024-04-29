@@ -4,8 +4,11 @@ import java.security.Timestamp;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.experimental.Accessors;
+
 
 @Data
+@Accessors(chain = true)
 @Entity
 @Table(name = "usuarios")
 public class User {
