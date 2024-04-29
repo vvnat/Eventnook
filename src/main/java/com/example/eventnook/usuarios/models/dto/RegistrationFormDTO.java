@@ -3,7 +3,6 @@ package com.example.eventnook.usuarios.models.dto;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.AssertTrue;
 
 import lombok.Data;
 
@@ -29,17 +28,5 @@ public class RegistrationFormDTO {
     @NotNull(message = "La contraseña no puede estar vacía")
     private String password;
 
-    @Size(min = 8, message = "La contraseña debe tener al menos 8 caracteres")
-    @NotNull(message = "La contraseña no puede estar vacía")
-    private String repeatPassword;
-
     private String image;
-
-    @AssertTrue(message = "Las contraseñas deben coincidir")
-    private boolean isValid() {
-        if (password == null || repeatPassword == null) {
-            return false;
-        }
-        return password.equals(repeatPassword);
-    }
 }

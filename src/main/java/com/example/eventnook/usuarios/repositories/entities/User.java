@@ -26,8 +26,6 @@ public class User {
 
     private String password;
 
-    private String repeatPassword;
-
     private String image;
 
     private Timestamp createdAt;

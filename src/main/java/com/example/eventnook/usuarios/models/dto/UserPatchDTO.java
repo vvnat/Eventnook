@@ -1,6 +1,5 @@
 package com.example.eventnook.usuarios.models.dto;
 
-import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Size;
 import lombok.Builder;
@@ -26,16 +25,6 @@ public class UserPatchDTO {
     @Size(min = 8, message = "La contraseña debe tener al menos 8 caracteres")
     private String password;
 
-    @Size(min = 8, message = "La contraseña debe tener al menos 8 caracteres")
-    private String repeatPassword;
-
     private String image;
 
-    @AssertTrue(message = "Las contraseñas deben coincidir")
-    private boolean isValid() {
-        if (password == null || repeatPassword == null) {
-            return false;
-        }
-        return password.equals(repeatPassword);
-    }
 }
