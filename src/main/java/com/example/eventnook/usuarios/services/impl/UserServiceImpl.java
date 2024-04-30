@@ -1,6 +1,5 @@
 package com.example.eventnook.usuarios.services.impl;
 
-import java.sql.Timestamp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;

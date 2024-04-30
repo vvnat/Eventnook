@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-04-2024 a las 09:12:27
+-- Tiempo de generación: 30-04-2024 a las 11:22:44
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -75,22 +75,22 @@ INSERT INTO `caterings` (`id`, `nombre`, `descripcion`, `precio`, `tipo_evento`,
 
 CREATE TABLE `espacios` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(255) NOT NULL,
-  `imagen` varchar(255) DEFAULT NULL,
-  `descripcion` text DEFAULT NULL,
-  `aforo` int(11) DEFAULT NULL,
-  `precio` decimal(10,2) DEFAULT NULL,
-  `aire_libre` tinyint(1) DEFAULT NULL,
-  `espacio_cerrado` tinyint(1) DEFAULT NULL,
-  `tipo_evento` enum('boda','cena de empresa','congreso','concierto') NOT NULL,
-  `numero_contacto` varchar(20) DEFAULT NULL
+  `name` varchar(255) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `capacity` int(11) DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
+  `open_space` tinyint(1) DEFAULT NULL,
+  `enclosed_space` tinyint(1) DEFAULT NULL,
+  `event_type` enum('boda','cena de empresa','congreso','concierto') NOT NULL,
+  `contact_number` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `espacios`
 --
 
-INSERT INTO `espacios` (`id`, `nombre`, `imagen`, `descripcion`, `aforo`, `precio`, `aire_libre`, `espacio_cerrado`, `tipo_evento`, `numero_contacto`) VALUES
+INSERT INTO `espacios` (`id`, `name`, `image`, `description`, `capacity`, `price`, `open_space`, `enclosed_space`, `event_type`, `contact_number`) VALUES
 (1, 'Salón Dorado', 'imagen1.jpg', 'Espacio elegante y espacioso para eventos especiales.', 150, 500.00, 0, 1, 'boda', '623154785'),
 (2, 'Jardín de las Rosas', 'imagen2.jpg', 'Hermoso jardín al aire libre ideal para bodas y eventos al aire libre.', 200, 700.00, 1, 0, 'boda', '654852365'),
 (3, 'Salón de Conferencias A', 'imagen3.jpg', 'Espacio perfecto para conferencias y charlas empresariales.', 100, 300.00, 0, 1, 'congreso', '622523414'),

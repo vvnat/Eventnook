@@ -9,3 +9,5 @@ Delete no funciona porque antes de eliminar un usuario hay que eliminar sus even
 Update no sé cómo se prueba xd
 
 Create tampoco
+
+ver si hace falta algo en el spaceRepository
