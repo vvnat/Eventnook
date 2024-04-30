@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-04-2024 a las 11:29:52
+-- Tiempo de generación: 30-04-2024 a las 09:12:27
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -354,28 +354,29 @@ INSERT INTO `restaurantes` (`id`, `nombre`, `imagen`, `descripcion`, `aforo`, `p
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `apellidos` varchar(100) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `foto` varchar(255) DEFAULT NULL
+  `image` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `username`, `nombre`, `apellidos`, `email`, `password`, `foto`) VALUES
-(1, 'user1', 'Juan', 'Pérez González', 'juan@example.com', 'contraseña123', 'foto1.jpg'),
-(2, 'user2', 'María', 'López Martínez', 'maria@example.com', 'clave456', 'foto2.jpg'),
-(3, 'jose89', 'José', 'García Fernández', 'jose@example.com', 'password789', NULL),
-(4, 'ana22', 'Ana', 'Rodríguez Pérez', 'ana@example.com', '123abc', 'foto3.jpg'),
-(5, 'luisa74', 'Luisa', 'Sánchez García', 'luisa@example.com', 'contraseña321', NULL),
-(6, 'pablo', 'Pablo', 'Hernández Rodríguez', 'pablo@example.com', 'abc123', 'foto4.jpg'),
-(7, 'laura', 'Laura', 'Martínez López', 'laura@example.com', 'password123', NULL),
-(8, 'carlos', 'Carlos', 'Fernández Pérez', 'carlos@example.com', 'pass123', 'foto5.jpg'),
-(9, 'sara', 'Sara', 'Gómez Ruiz', 'sara@example.com', 'password456', NULL),
-(10, 'david', 'David', 'Jiménez Martín', 'david@example.com', 'pass456', 'foto6.jpg');
+INSERT INTO `usuarios` (`id`, `username`, `name`, `last_name`, `email`, `password`, `image`, `created_at`) VALUES
+(1, 'user1', 'Juan', 'Pérez González', 'juan@example.com', 'contraseña123', 'foto1.jpg', '2024-04-28 22:00:00'),
+(2, 'user2', 'María', 'López Martínez', 'maria@example.com', 'clave456', 'foto2.jpg', '2024-04-28 22:00:00'),
+(3, 'jose89', 'José', 'García Fernández', 'jose@example.com', 'password789', NULL, '2024-04-28 22:00:00'),
+(4, 'ana22', 'Ana', 'Rodríguez Pérez', 'ana@example.com', '123abc', 'foto3.jpg', '2024-04-28 22:00:00'),
+(5, 'luisa74', 'Luisa', 'Sánchez García', 'luisa@example.com', 'contraseña321', NULL, '2024-04-28 22:00:00'),
+(6, 'pablo', 'Pablo', 'Hernández Rodríguez', 'pablo@example.com', 'abc123', 'foto4.jpg', '2024-04-28 22:00:00'),
+(7, 'laura', 'Laura', 'Martínez López', 'laura@example.com', 'password123', NULL, '2024-04-28 22:00:00'),
+(8, 'carlos', 'Carlos', 'Fernández Pérez', 'carlos@example.com', 'pass123', 'foto5.jpg', '2024-04-28 22:00:00'),
+(9, 'sara', 'Sara', 'Gómez Ruiz', 'sara@example.com', 'password456', NULL, '2024-04-28 22:00:00'),
+(10, 'david', 'David', 'Jiménez Martín', 'david@example.com', 'pass456', 'foto6.jpg', '2024-04-28 22:00:00');
 
 --
 -- Índices para tablas volcadas
