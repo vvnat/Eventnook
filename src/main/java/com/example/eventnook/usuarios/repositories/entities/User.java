@@ -1,6 +1,6 @@
 package com.example.eventnook.usuarios.repositories.entities;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 import jakarta.persistence.*;
 import lombok.Data;

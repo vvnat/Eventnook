@@ -1,5 +1,6 @@
 package com.example.eventnook.usuarios.services.impl;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,7 @@ public class UserServiceImpl implements UserService{
                          .lastName(user.getLastName())
                          .email(user.getEmail())
                          .image(user.getImage())
+                        // .createdAt(new Timestamp(user.getCreatedAt().getTime()))
                          .build()
          ).toList();
      }
@@ -79,6 +81,7 @@ public class UserServiceImpl implements UserService{
                 .lastName(user.getLastName())
                 .email(user.getEmail())
                 .image(user.getImage())
+   //             .createdAt(user.getCreatedAt())
                 .build();
     }
     

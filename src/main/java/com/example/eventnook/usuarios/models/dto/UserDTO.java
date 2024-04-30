@@ -1,5 +1,9 @@
 package com.example.eventnook.usuarios.models.dto;
 
+import java.io.Serializable;
+import java.security.Timestamp;
+import java.util.Date;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -8,7 +12,7 @@ import lombok.Data;
 
 @Builder
 @Data
-public class UserDTO {
+public class UserDTO implements Serializable{
     private Long id;
 
     @Size(min = 3, max = 20, message = "El nombre de usuario debe tener entre 3 y 20 caracteres")
@@ -33,5 +37,5 @@ public class UserDTO {
 
     private String image;
 
-    private Data createdAt;
+    private Timestamp createdAt;
 }

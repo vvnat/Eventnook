@@ -1,3 +1,5 @@
 UserService descomentar ultima línea al crear la clase evento
 
 UserController ultimo metodo de listar eventos de un usuario
+
+Antes de eliminar un usuario, eliminar sus eventos
