@@ -8,10 +8,16 @@ import com.example.eventnook.usuarios.models.dto.UserPatchDTO;
 
 public interface UserService {
     List<UserDTO> findAll();
+
     UserDTO create(RegistrationFormDTO registrationFormDTO);
+
     UserDTO findById(Long id);
+
     UserDTO update(UserDTO userDTO);
+
     UserDTO updatePartial(UserPatchDTO userPatchDTO);
+
     boolean delete(Long id);
+    
    // List<Event> findEventsByUserId(Long id);
 }
