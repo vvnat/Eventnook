@@ -24,7 +24,7 @@ public class SpaceServiceImpl implements SpaceService{
     }
 
     @Override
-    public List<Space> findByEventType(EventType eventType) {
+    public List<Space> findByEventType(int eventType) {
        return spaceRepository.findSpaceByEventType(eventType);
     }
 

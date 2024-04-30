@@ -11,6 +11,9 @@ import lombok.Data;
 @Entity
 @Table(name = "espacios")
 public class Space {
+
+    private String[] eventTypes = { "boda", "cena_empresa", "congreso", "concierto" };
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -29,7 +32,7 @@ public class Space {
 
     private boolean enclosedSpace;
 
-    private EventType eventType;
+    private int eventType;
 
     private int contactNumber;
 

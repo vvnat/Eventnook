@@ -30,7 +30,7 @@ public class SpaceController {
     }
 
     @GetMapping("/spaces/{eventType}")
-    public ResponseEntity<List<Space>> findByEventType(EventType eventType) {
+    public ResponseEntity<List<Space>> findByEventType(int eventType) {
         return ResponseEntity.status(HttpStatus.OK).body(spaceService.findByEventType(eventType));
     }
 
