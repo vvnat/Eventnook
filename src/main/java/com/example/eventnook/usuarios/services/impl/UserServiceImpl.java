@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService{
                          .lastName(user.getLastName())
                          .email(user.getEmail())
                          .image(user.getImage())
-                        // .createdAt(new Timestamp(user.getCreatedAt().getTime()))
+                         .createdAt(user.getCreatedAt())
                          .build()
          ).toList();
      }
@@ -81,7 +81,7 @@ public class UserServiceImpl implements UserService{
                 .lastName(user.getLastName())
                 .email(user.getEmail())
                 .image(user.getImage())
-   //             .createdAt(user.getCreatedAt())
+                .createdAt(user.getCreatedAt())
                 .build();
     }
     

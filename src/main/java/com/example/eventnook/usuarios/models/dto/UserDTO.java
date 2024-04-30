@@ -1,8 +1,7 @@
 package com.example.eventnook.usuarios.models.dto;
 
 import java.io.Serializable;
-import java.security.Timestamp;
-import java.util.Date;
+import java.sql.Timestamp;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;

@@ -1,5 +1,11 @@
-UserService descomentar ultima línea al crear la clase evento
-
 UserController ultimo metodo de listar eventos de un usuario
 
-Antes de eliminar un usuario, eliminar sus eventos
+UserService crear e implementar método de listar eventos de un usuario
+
+findAll y findById de Users funciona :)
+
+Delete no funciona porque antes de eliminar un usuario hay que eliminar sus eventos (por implementar)
+
+Update no sé cómo se prueba xd
+
+Create tampoco
