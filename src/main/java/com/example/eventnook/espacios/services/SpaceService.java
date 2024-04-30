@@ -8,7 +8,7 @@ public interface SpaceService {
 
     List<Space> findAll();
 
-    List<Space> findByEventType(int eventType);
+    List<Space> findByEventType(Integer eventType);
     
     Space findById(Long id);
 }

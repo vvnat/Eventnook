@@ -22,7 +22,7 @@ public class SpaceServiceImpl implements SpaceService{
     }
 
     @Override
-    public List<Space> findByEventType(int eventType) {
+    public List<Space> findByEventType(Integer eventType) {
        return spaceRepository.findSpaceByEventType(eventType);
     }
 

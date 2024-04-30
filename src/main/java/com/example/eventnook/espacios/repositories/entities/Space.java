@@ -30,7 +30,7 @@ public class Space {
 
     private boolean enclosedSpace;
 
-    private int eventType;
+    private Integer eventType;
 
     private int contactNumber;
 
