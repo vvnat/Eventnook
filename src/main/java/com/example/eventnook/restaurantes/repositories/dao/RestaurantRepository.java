@@ -1,12 +1,9 @@
-package com.example.eventnook.restaurants.repositories.dao;
+package com.example.eventnook.restaurantes.repositories.dao;
 
-import com.example.eventnook.restaurants.repositories.entities.Restaurant;
+import com.example.eventnook.restaurantes.repositories.entities.Restaurant;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Transactional
 @Repository

@@ -1,6 +1,6 @@
-package com.example.eventnook.restaurants.services;
+package com.example.eventnook.restaurantes.services;
 
-import com.example.eventnook.restaurants.repositories.entities.Restaurant;
+import com.example.eventnook.restaurantes.repositories.entities.Restaurant;
 
 import java.util.List;
 

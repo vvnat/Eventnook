@@ -1,10 +1,9 @@
-package com.example.eventnook.restaurants.services.impl;
+package com.example.eventnook.restaurantes.services.impl;
 
-import com.example.eventnook.espacios.exceptions.SpaceNotFoundException;
-import com.example.eventnook.restaurants.exceptions.RestaurantNotFoundException;
-import com.example.eventnook.restaurants.repositories.dao.RestaurantRepository;
-import com.example.eventnook.restaurants.repositories.entities.Restaurant;
-import com.example.eventnook.restaurants.services.RestaurantService;
+import com.example.eventnook.restaurantes.exceptions.RestaurantNotFoundException;
+import com.example.eventnook.restaurantes.repositories.dao.RestaurantRepository;
+import com.example.eventnook.restaurantes.repositories.entities.Restaurant;
+import com.example.eventnook.restaurantes.services.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

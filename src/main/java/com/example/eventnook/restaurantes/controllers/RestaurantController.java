@@ -1,9 +1,7 @@
-package com.example.eventnook.restaurants.controllers;
+package com.example.eventnook.restaurantes.controllers;
 
-import com.example.eventnook.espacios.repositories.entities.Space;
-import com.example.eventnook.espacios.services.SpaceService;
-import com.example.eventnook.restaurants.repositories.entities.Restaurant;
-import com.example.eventnook.restaurants.services.RestaurantService;
+import com.example.eventnook.restaurantes.repositories.entities.Restaurant;
+import com.example.eventnook.restaurantes.services.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

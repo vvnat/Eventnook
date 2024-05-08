@@ -1,4 +1,4 @@
-package com.example.eventnook.restaurants.repositories.entities;
+package com.example.eventnook.restaurantes.repositories.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;

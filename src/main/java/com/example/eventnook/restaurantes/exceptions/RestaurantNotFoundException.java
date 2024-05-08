@@ -1,4 +1,4 @@
-package com.example.eventnook.restaurants.exceptions;
+package com.example.eventnook.restaurantes.exceptions;
 
 import com.example.eventnook.shared.exceptions.DataNotFoundException;
 
