@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-04-2024 a las 13:09:50
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Tiempo de generación: 12-05-2024 a las 22:31:01
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,43 +29,43 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `caterings` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(255) NOT NULL,
-  `descripcion` text DEFAULT NULL,
-  `precio` decimal(10,2) DEFAULT NULL,
-  `tipo_evento` enum('boda','cena de empresa','congreso','concierto') NOT NULL,
-  `numero_contacto` varchar(20) DEFAULT NULL
+  `name` varchar(255) NOT NULL,
+  `description` text DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
+  `event_type` int(11) NOT NULL,
+  `contact_number` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `caterings`
 --
 
-INSERT INTO `caterings` (`id`, `nombre`, `descripcion`, `precio`, `tipo_evento`, `numero_contacto`) VALUES
-(1, 'Sabor Mediterráneo', 'Deléitese con nuestra exquisita selección de platos mediterráneos, preparados con ingredientes frescos y sazonados con hierbas aromáticas. Perfecto para bodas al aire libre y cenas de empresa elegantes.', 55.00, 'boda', '912345678'),
-(2, 'Catering Elegance', 'Ofrecemos un servicio de catering elegante y sofisticado, con platos refinados presentados con estilo. Ideal para eventos corporativos y cenas de gala que requieren un toque de distinción.', 70.00, 'cena de empresa', '622123456'),
-(3, 'Fusión Creativa', 'Descubre una experiencia culinaria única con nuestra fusión creativa de sabores de todo el mundo. Perfecto para eventos de conciertos y festivales donde la diversidad es bienvenida.', 60.00, 'concierto', '934567890'),
-(4, 'Tradición Casera', 'Nuestro servicio de catering ofrece una deliciosa selección de platos caseros, preparados con recetas tradicionales y productos frescos de la región. Ideal para eventos familiares y cenas íntimas.', 60.00, 'boda', '600234567'),
-(5, 'Gastronomía Exquisita', 'Déjese seducir por nuestra gastronomía exquisita, donde cada plato es una obra maestra de sabor y presentación. Perfecto para banquetes de bodas y cenas de empresa exclusivas.', 62.00, 'boda', '677234567'),
-(6, 'Catering del Chef', 'Experimenta la magia de la alta cocina con nuestro catering del chef, donde cada plato es una expresión de creatividad y excelencia culinaria. Ideal para eventos de lujo y celebraciones especiales.', 57.00, 'cena de empresa', '688345678'),
-(7, 'Sabor del Este', 'Embárcate en un viaje culinario a través de Europa del Este y Oriente con nuestra selección de platos auténticos y sabrosos. Perfecto para congresos y eventos temáticos.', 55.00, 'congreso', '699456789'),
-(8, 'Catering Vegano', 'Descubre el delicioso mundo de la cocina vegana con nuestro servicio de catering, donde cada plato es una explosión de sabor y vitalidad. Ideal para eventos conscientes y respetuosos con el medio ambiente.', 60.00, 'concierto', '611567890'),
-(9, 'Catering Delicia', 'Disfruta de una experiencia culinaria única con nuestro servicio de catering Delicia, donde cada plato está cuidadosamente preparado para deleitar tus sentidos. Perfecto para bodas y eventos especiales.', 82.00, 'boda', '688990011'),
-(10, 'Catering Creativo', 'Déjate sorprender por nuestra cocina creativa y vanguardista, donde los sabores se fusionan para crear platos únicos e innovadores. Ideal para eventos de empresa y lanzamientos de productos.', 71.00, 'cena de empresa', '677889900'),
-(11, 'Sabor Tradicional', 'Revive la auténtica cocina casera con nuestro catering de sabor tradicional, donde cada plato te transportará a la nostalgia de los sabores de siempre. Perfecto para celebraciones familiares y reuniones íntimas.', 59.00, 'boda', '688001122'),
-(12, 'Catering Saludable', 'Descubre el placer de comer saludablemente con nuestro servicio de catering saludable, donde cada bocado es una explosión de frescura y vitalidad. Ideal para eventos deportivos y conferencias sobre bienestar.', 63.00, 'congreso', '677112233'),
-(13, 'Sabor del Mar', 'Sumérgete en una experiencia gastronómica única con nuestro catering del mar, donde los productos frescos del mar son los protagonistas de cada plato. Perfecto para eventos junto a la costa y celebraciones marineras.', 74.00, 'concierto', '688223344'),
-(14, 'Catering Gourmet', 'Déjate llevar por el lujo de la alta cocina con nuestro servicio de catering gourmet, donde cada plato es una obra de arte culinaria. Ideal para eventos de gala y cenas de etiqueta.', 80.00, 'cena de empresa', '677334455'),
-(15, 'Sabor Auténtico', 'Revive la esencia de la cocina auténtica con nuestro catering, donde cada plato te transportará a tradiciones culinarias únicas. Perfecto para celebraciones familiares y reuniones íntimas.', 40.00, 'boda', '688001122'),
-(16, 'Coffee Break Express', 'Disfrute de nuestro servicio de Coffee Break Express diseñado especialmente para congresos y eventos empresariales. Incluye una selección de café recién hecho, té, jugos, y una variedad de tentempiés dulces y salados para recargar energías.', 10.00, 'congreso', '688990011'),
-(17, 'Catering de Refrescos', 'Refresque su reunión con nuestro Catering de Refrescos, que ofrece una amplia variedad de bebidas frías, como agua mineral, refrescos, jugos naturales y bebidas energéticas, junto con una selección de bocadillos y frutas frescas.', 8.00, 'congreso', '677889900'),
-(18, 'Break Ligero', 'Este servicio de catering ofrece una pausa ligera durante su congreso, con una selección de café, té, agua, y una variedad de bocadillos saludables como mini sándwiches, frutas frescas, yogures y frutos secos.', 12.00, 'congreso', '688001122'),
-(19, 'Tentempiés Energéticos', 'Mantenga la energía durante su evento con nuestro servicio de Tentempiés Energéticos, que ofrece una combinación de barras de cereales, frutos secos, galletas integrales, infusiones energizantes y bebidas isotónicas.', 15.00, 'congreso', '677112233'),
-(20, 'Café y Más', 'Nuestro servicio Café y Más proporciona una experiencia de café premium junto con una variedad de opciones adicionales, como croissants, muffins, frutas frescas, yogures, y una selección de tés e infusiones.', 18.00, 'congreso', '688223344'),
-(21, 'Fiesta de Sabores', 'Celebre su concierto con nuestra Fiesta de Sabores, que ofrece una amplia variedad de pizzas artesanales, bocadillos, palomitas de maíz, nachos con queso, snacks variados y una selección de bebidas frías y refrescos.', 20.00, 'concierto', '688990011'),
-(22, 'Catering de Picoteo', 'Disfrute de un Catering de Picoteo durante su concierto, con una selección de tapas, quesos, embutidos, patatas fritas, salsas, y una variedad de bebidas, desde cervezas hasta cócteles y refrescos.', 22.00, 'concierto', '677889900'),
-(23, 'Pizza Party', 'Organice una Pizza Party en su concierto con una variedad de pizzas recién horneadas, desde clásicas margaritas hasta sabrosas especialidades, acompañadas de ensaladas frescas, snacks y una selección de bebidas.', 18.00, 'concierto', '688001122'),
-(24, 'Barra Libre y Snacks', 'Ofrezca a sus asistentes una experiencia completa con una Barra Libre de bebidas alcohólicas y no alcohólicas, junto con una variedad de snacks como patatas fritas, frutos secos, pretzels y palitos de pan.', 25.00, 'concierto', '677112233'),
-(25, 'Dulces Delicias', 'Termine su concierto con un toque dulce con nuestro servicio Dulces Delicias, que incluye una selección de postres como brownies, galletas, helados, frutas bañadas en chocolate, junto con café, té y otras bebidas.', 16.00, 'concierto', '688223344');
+INSERT INTO `caterings` (`id`, `name`, `description`, `price`, `event_type`, `contact_number`) VALUES
+(1, 'Sabor Mediterráneo', 'Deléitese con nuestra exquisita selección de platos mediterráneos, preparados con ingredientes frescos y sazonados con hierbas aromáticas. Perfecto para bodas al aire libre y cenas de empresa elegantes.', 55.00, 0, '912345678'),
+(2, 'Catering Elegance', 'Ofrecemos un servicio de catering elegante y sofisticado, con platos refinados presentados con estilo. Ideal para eventos corporativos y cenas de gala que requieren un toque de distinción.', 70.00, 1, '622123456'),
+(3, 'Fusión Creativa', 'Descubre una experiencia culinaria única con nuestra fusión creativa de sabores de todo el mundo. Perfecto para eventos de conciertos y festivales donde la diversidad es bienvenida.', 60.00, 3, '934567890'),
+(4, 'Tradición Casera', 'Nuestro servicio de catering ofrece una deliciosa selección de platos caseros, preparados con recetas tradicionales y productos frescos de la región. Ideal para eventos familiares y cenas íntimas.', 60.00, 0, '600234567'),
+(5, 'Gastronomía Exquisita', 'Déjese seducir por nuestra gastronomía exquisita, donde cada plato es una obra maestra de sabor y presentación. Perfecto para banquetes de bodas y cenas de empresa exclusivas.', 62.00, 0, '677234567'),
+(6, 'Catering del Chef', 'Experimenta la magia de la alta cocina con nuestro catering del chef, donde cada plato es una expresión de creatividad y excelencia culinaria. Ideal para eventos de lujo y celebraciones especiales.', 57.00, 1, '688345678'),
+(7, 'Sabor del Este', 'Embárcate en un viaje culinario a través de Europa del Este y Oriente con nuestra selección de platos auténticos y sabrosos. Perfecto para congresos y eventos temáticos.', 55.00, 2, '699456789'),
+(8, 'Catering Vegano', 'Descubre el delicioso mundo de la cocina vegana con nuestro servicio de catering, donde cada plato es una explosión de sabor y vitalidad. Ideal para eventos conscientes y respetuosos con el medio ambiente.', 60.00, 0, '611567890'),
+(9, 'Catering Delicia', 'Disfruta de una experiencia culinaria única con nuestro servicio de catering Delicia, donde cada plato está cuidadosamente preparado para deleitar tus sentidos. Perfecto para bodas y eventos especiales.', 82.00, 0, '688990011'),
+(10, 'Catering Creativo', 'Déjate sorprender por nuestra cocina creativa y vanguardista, donde los sabores se fusionan para crear platos únicos e innovadores. Ideal para eventos de empresa y lanzamientos de productos.', 71.00, 1, '677889900'),
+(11, 'Sabor Tradicional', 'Revive la auténtica cocina casera con nuestro catering de sabor tradicional, donde cada plato te transportará a la nostalgia de los sabores de siempre. Perfecto para celebraciones familiares y reuniones íntimas.', 59.00, 0, '688001122'),
+(12, 'Catering Saludable', 'Descubre el placer de comer saludablemente con nuestro servicio de catering saludable, donde cada bocado es una explosión de frescura y vitalidad. Ideal para eventos deportivos y conferencias sobre bienestar.', 63.00, 2, '677112233'),
+(13, 'Sabor del Mar', 'Sumérgete en una experiencia gastronómica única con nuestro catering del mar, donde los productos frescos del mar son los protagonistas de cada plato. Perfecto para eventos junto a la costa y celebraciones marineras.', 74.00, 3, '688223344'),
+(14, 'Catering Gourmet', 'Déjate llevar por el lujo de la alta cocina con nuestro servicio de catering gourmet, donde cada plato es una obra de arte culinaria. Ideal para eventos de gala y cenas de etiqueta.', 80.00, 1, '677334455'),
+(15, 'Sabor Auténtico', 'Revive la esencia de la cocina auténtica con nuestro catering, donde cada plato te transportará a tradiciones culinarias únicas. Perfecto para celebraciones familiares y reuniones íntimas.', 40.00, 0, '688001122'),
+(16, 'Coffee Break Express', 'Disfrute de nuestro servicio de Coffee Break Express diseñado especialmente para congresos y eventos empresariales. Incluye una selección de café recién hecho, té, jugos, y una variedad de tentempiés dulces y salados para recargar energías.', 10.00, 2, '688990011'),
+(17, 'Catering de Refrescos', 'Refresque su reunión con nuestro Catering de Refrescos, que ofrece una amplia variedad de bebidas frías, como agua mineral, refrescos, jugos naturales y bebidas energéticas, junto con una selección de bocadillos y frutas frescas.', 8.00, 2, '677889900'),
+(18, 'Break Ligero', 'Este servicio de catering ofrece una pausa ligera durante su congreso, con una selección de café, té, agua, y una variedad de bocadillos saludables como mini sándwiches, frutas frescas, yogures y frutos secos.', 12.00, 2, '688001122'),
+(19, 'Tentempiés Energéticos', 'Mantenga la energía durante su evento con nuestro servicio de Tentempiés Energéticos, que ofrece una combinación de barras de cereales, frutos secos, galletas integrales, infusiones energizantes y bebidas isotónicas.', 15.00, 2, '677112233'),
+(20, 'Café y Más', 'Nuestro servicio Café y Más proporciona una experiencia de café premium junto con una variedad de opciones adicionales, como croissants, muffins, frutas frescas, yogures, y una selección de tés e infusiones.', 18.00, 2, '688223344'),
+(21, 'Fiesta de Sabores', 'Celebre su concierto con nuestra Fiesta de Sabores, que ofrece una amplia variedad de pizzas artesanales, bocadillos, palomitas de maíz, nachos con queso, snacks variados y una selección de bebidas frías y refrescos.', 20.00, 3, '688990011'),
+(22, 'Catering de Picoteo', 'Disfrute de un Catering de Picoteo durante su concierto, con una selección de tapas, quesos, embutidos, patatas fritas, salsas, y una variedad de bebidas, desde cervezas hasta cócteles y refrescos.', 22.00, 3, '677889900'),
+(23, 'Pizza Party', 'Organice una Pizza Party en su concierto con una variedad de pizzas recién horneadas, desde clásicas margaritas hasta sabrosas especialidades, acompañadas de ensaladas frescas, snacks y una selección de bebidas.', 18.00, 3, '688001122'),
+(24, 'Barra Libre y Snacks', 'Ofrezca a sus asistentes una experiencia completa con una Barra Libre de bebidas alcohólicas y no alcohólicas, junto con una variedad de snacks como patatas fritas, frutos secos, pretzels y palitos de pan.', 25.00, 3, '677112233'),
+(25, 'Dulces Delicias', 'Termine su concierto con un toque dulce con nuestro servicio Dulces Delicias, que incluye una selección de postres como brownies, galletas, helados, frutas bañadas en chocolate, junto con café, té y otras bebidas.', 16.00, 3, '688223344');
 
 -- --------------------------------------------------------
 
@@ -312,39 +312,40 @@ INSERT INTO `reservas_restaurantes` (`id`, `id_restaurante`, `fecha_inicio`, `fe
 
 CREATE TABLE `restaurantes` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(255) NOT NULL,
-  `imagen` varchar(255) DEFAULT NULL,
-  `descripcion` text DEFAULT NULL,
-  `aforo` int(11) DEFAULT NULL,
-  `precio` decimal(10,2) DEFAULT NULL,
-  `numero_contacto` varchar(20) DEFAULT NULL
+  `name` varchar(255) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `capacity` int(11) DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
+  `contact_number` varchar(20) DEFAULT NULL,
+  `address` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `restaurantes`
 --
 
-INSERT INTO `restaurantes` (`id`, `nombre`, `imagen`, `descripcion`, `aforo`, `precio`, `numero_contacto`) VALUES
-(1, 'Restaurante La Terraza', 'imagen1.jpg', 'Restaurante con terraza al aire libre y excelente cocina mediterránea.', 80, 40.00, '912345678'),
-(2, 'El Rincón de María', 'imagen2.jpg', 'Acogedor restaurante familiar con especialidades caseras.', 50, 30.00, '934567890'),
-(3, 'La Parrilla del Sur', 'imagen3.jpg', 'Carnes a la parrilla y platos tradicionales en un ambiente rústico.', 100, 50.00, '910987654'),
-(4, 'Cafetería Central', 'imagen4.jpg', 'Cafetería con variedad de bocadillos, pasteles y café recién hecho.', 40, 20.00, '923456789'),
-(5, 'Taberna El Olivo', 'imagen5.jpg', 'Taberna típica con tapas y vinos de la región en un ambiente acogedor.', 60, 35.00, '931234567'),
-(6, 'Restaurante La Fuente', 'imagen6.jpg', 'Restaurante con comida internacional y terraza junto a una fuente.', 120, 60.00, '918765432'),
-(7, 'Pizzería La Italiana', 'imagen7.jpg', 'Pizzas artesanales y pasta fresca en un ambiente italiano.', 70, 25.00, '944567890'),
-(8, 'Burger Bar Express', 'imagen8.jpg', 'Hamburguesas gourmet y patatas fritas caseras en un local moderno.', 50, 20.00, '937654321'),
-(9, 'Cervecería La Abadía', 'imagen9.jpg', 'Cervecería con una amplia selección de cervezas artesanales.', 80, 35.00, '919876543'),
-(10, 'Mesón del Bosque', 'imagen10.jpg', 'Cocina tradicional española con vistas al bosque y chimenea.', 90, 45.00, '926543210'),
-(11, 'Restaurante Vegano Verde', 'imagen11.jpg', 'Restaurante vegano con platos saludables y opciones sin gluten.', 40, 35.00, '945678901'),
-(12, 'Bar de Tapas El Andaluz', 'imagen12.jpg', 'Bar de tapas con especialidades andaluzas y ambiente animado.', 60, 30.00, '915432109'),
-(13, 'Café Parisien', 'imagen13.jpg', 'Café parisino con croissants, tartas y café de primera calidad.', 30, 15.00, '930987654'),
-(14, 'Asador La Brasa', 'imagen14.jpg', 'Asador con carnes a la brasa y amplia selección de vinos.', 80, 50.00, '911234567'),
-(15, 'Sushi Bar Sakura', 'imagen15.jpg', 'Sushi fresco y sashimi en un ambiente japonés moderno.', 50, 40.00, '939876543'),
-(16, 'Ristorante Da Mario', 'imagen16.jpg', 'Auténtica cocina italiana con pasta fresca y pizzas al horno de leña.', 70, 35.00, '929012345'),
-(17, 'Churrería El Manantial', 'imagen17.jpg', 'Churrería tradicional con churros, porras y chocolate caliente.', 40, 20.00, '948765432'),
-(18, 'Bar de Mariscos La Mar', 'imagen18.jpg', 'Bar de mariscos frescos y pescado del día en un ambiente marinero.', 60, 55.00, '913456789'),
-(19, 'Cafetería El Establo', 'imagen19.jpg', 'Cafetería con encanto en un antiguo establo restaurado.', 30, 25.00, '934109876'),
-(20, 'Restaurante Gastronómico El Cielo', 'imagen20.jpg', 'Restaurante de alta cocina con menú degustación y vistas panorámicas.', 40, 100.00, '917654321');
+INSERT INTO `restaurantes` (`id`, `name`, `image`, `description`, `capacity`, `price`, `contact_number`, `address`) VALUES
+(1, 'Restaurante La Terraza', 'imagen1.jpg', 'Restaurante con terraza al aire libre y excelente cocina mediterránea.', 80, 40.00, '912345678', ''),
+(2, 'El Rincón de María', 'imagen2.jpg', 'Acogedor restaurante familiar con especialidades caseras.', 50, 30.00, '934567890', ''),
+(3, 'La Parrilla del Sur', 'imagen3.jpg', 'Carnes a la parrilla y platos tradicionales en un ambiente rústico.', 100, 50.00, '910987654', ''),
+(4, 'Cafetería Central', 'imagen4.jpg', 'Cafetería con variedad de bocadillos, pasteles y café recién hecho.', 40, 20.00, '923456789', ''),
+(5, 'Taberna El Olivo', 'imagen5.jpg', 'Taberna típica con tapas y vinos de la región en un ambiente acogedor.', 60, 35.00, '931234567', ''),
+(6, 'Restaurante La Fuente', 'imagen6.jpg', 'Restaurante con comida internacional y terraza junto a una fuente.', 120, 60.00, '918765432', ''),
+(7, 'Pizzería La Italiana', 'imagen7.jpg', 'Pizzas artesanales y pasta fresca en un ambiente italiano.', 70, 25.00, '944567890', ''),
+(8, 'Burger Bar Express', 'imagen8.jpg', 'Hamburguesas gourmet y patatas fritas caseras en un local moderno.', 50, 20.00, '937654321', ''),
+(9, 'Cervecería La Abadía', 'imagen9.jpg', 'Cervecería con una amplia selección de cervezas artesanales.', 80, 35.00, '919876543', ''),
+(10, 'Mesón del Bosque', 'imagen10.jpg', 'Cocina tradicional española con vistas al bosque y chimenea.', 90, 45.00, '926543210', ''),
+(11, 'Restaurante Vegano Verde', 'imagen11.jpg', 'Restaurante vegano con platos saludables y opciones sin gluten.', 40, 35.00, '945678901', ''),
+(12, 'Bar de Tapas El Andaluz', 'imagen12.jpg', 'Bar de tapas con especialidades andaluzas y ambiente animado.', 60, 30.00, '915432109', ''),
+(13, 'Café Parisien', 'imagen13.jpg', 'Café parisino con croissants, tartas y café de primera calidad.', 30, 15.00, '930987654', ''),
+(14, 'Asador La Brasa', 'imagen14.jpg', 'Asador con carnes a la brasa y amplia selección de vinos.', 80, 50.00, '911234567', ''),
+(15, 'Sushi Bar Sakura', 'imagen15.jpg', 'Sushi fresco y sashimi en un ambiente japonés moderno.', 50, 40.00, '939876543', ''),
+(16, 'Ristorante Da Mario', 'imagen16.jpg', 'Auténtica cocina italiana con pasta fresca y pizzas al horno de leña.', 70, 35.00, '929012345', ''),
+(17, 'Churrería El Manantial', 'imagen17.jpg', 'Churrería tradicional con churros, porras y chocolate caliente.', 40, 20.00, '948765432', ''),
+(18, 'Bar de Mariscos La Mar', 'imagen18.jpg', 'Bar de mariscos frescos y pescado del día en un ambiente marinero.', 60, 55.00, '913456789', ''),
+(19, 'Cafetería El Establo', 'imagen19.jpg', 'Cafetería con encanto en un antiguo establo restaurado.', 30, 25.00, '934109876', ''),
+(20, 'Restaurante Gastronómico El Cielo', 'imagen20.jpg', 'Restaurante de alta cocina con menú degustación y vistas panorámicas.', 40, 100.00, '917654321', '');
 
 -- --------------------------------------------------------
 
