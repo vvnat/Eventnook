@@ -21,13 +21,13 @@ public class Event {
 
     private Date endDate;
 
-    private int SpaceId;
+    private int spaceId;
 
-    private int RestaurantId;
+    private int restaurantId;
 
-    private int CateringId;
+    private int cateringId;
 
-    private int MusicianId;
+    private int musicianId;
 
     private boolean open_bar;
 
