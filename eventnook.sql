@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-05-2024 a las 22:31:01
+-- Tiempo de generación: 13-05-2024 a las 20:04:00
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -141,31 +141,31 @@ INSERT INTO `espacios` (`id`, `name`, `image`, `description`, `capacity`, `price
 
 CREATE TABLE `eventos` (
   `id` int(11) NOT NULL,
-  `tipo_evento` enum('boda','cena de empresa','congreso','concierto') NOT NULL,
-  `id_creador` int(11) DEFAULT NULL,
-  `fecha_inicio` datetime DEFAULT NULL,
-  `fecha_fin` datetime DEFAULT NULL,
-  `id_espacio` int(11) DEFAULT NULL,
-  `id_restaurante` int(11) DEFAULT NULL,
-  `id_catering` int(11) DEFAULT NULL,
-  `id_musica` int(11) DEFAULT NULL,
-  `barra_libre` tinyint(1) DEFAULT NULL,
-  `numero_invitados` int(11) DEFAULT NULL
+  `event_type` int(11) NOT NULL,
+  `creator_id` int(11) DEFAULT NULL,
+  `start_date` datetime DEFAULT NULL,
+  `end_date` datetime DEFAULT NULL,
+  `space_id` int(11) DEFAULT NULL,
+  `restaurant_id` int(11) DEFAULT NULL,
+  `catering_id` int(11) DEFAULT NULL,
+  `musician_id` int(11) DEFAULT NULL,
+  `open_bar` tinyint(1) DEFAULT NULL,
+  `guests_number` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `eventos`
 --
 
-INSERT INTO `eventos` (`id`, `tipo_evento`, `id_creador`, `fecha_inicio`, `fecha_fin`, `id_espacio`, `id_restaurante`, `id_catering`, `id_musica`, `barra_libre`, `numero_invitados`) VALUES
-(1, 'boda', 1, '2024-05-10 17:00:00', '2024-05-10 22:00:00', 1, NULL, 1, 1, 1, 100),
-(2, 'cena de empresa', 2, '2024-06-15 19:00:00', '2024-06-15 23:00:00', NULL, 2, NULL, NULL, 1, 50),
-(3, 'congreso', 3, '2024-07-20 09:00:00', '2024-07-22 18:00:00', 3, NULL, 16, NULL, 0, 300),
-(4, 'concierto', 4, '2024-08-25 19:00:00', '2024-08-25 23:00:00', 15, NULL, 23, NULL, 1, 200),
-(5, 'boda', 5, '2024-09-30 16:00:00', '2024-09-30 21:00:00', 7, NULL, 5, 5, 1, 150),
-(6, 'cena de empresa', 6, '2024-10-15 20:00:00', '2024-10-15 23:00:00', 5, NULL, 10, NULL, 1, 80),
-(7, 'congreso', 7, '2024-11-20 09:00:00', '2024-11-22 18:00:00', 20, NULL, 18, 12, 0, 250),
-(8, 'concierto', 8, '2024-12-25 18:00:00', '2024-12-25 22:00:00', 10, NULL, NULL, 20, 1, 180);
+INSERT INTO `eventos` (`id`, `event_type`, `creator_id`, `start_date`, `end_date`, `space_id`, `restaurant_id`, `catering_id`, `musician_id`, `open_bar`, `guests_number`) VALUES
+(1, 1, 1, '2024-05-10 17:00:00', '2024-05-10 22:00:00', 1, NULL, 1, 1, 1, 100),
+(2, 2, 2, '2024-06-15 19:00:00', '2024-06-15 23:00:00', NULL, 2, NULL, NULL, 1, 50),
+(3, 3, 3, '2024-07-20 09:00:00', '2024-07-22 18:00:00', 3, NULL, 16, NULL, 0, 300),
+(4, 4, 4, '2024-08-25 19:00:00', '2024-08-25 23:00:00', 15, NULL, 23, NULL, 1, 200),
+(5, 1, 5, '2024-09-30 16:00:00', '2024-09-30 21:00:00', 7, NULL, 5, 5, 1, 150),
+(6, 2, 6, '2024-10-15 20:00:00', '2024-10-15 23:00:00', 5, NULL, 10, NULL, 1, 80),
+(7, 3, 7, '2024-11-20 09:00:00', '2024-11-22 18:00:00', 20, NULL, 18, 12, 0, 250),
+(8, 4, 8, '2024-12-25 18:00:00', '2024-12-25 22:00:00', 10, NULL, NULL, 20, 1, 180);
 
 -- --------------------------------------------------------
 
@@ -175,38 +175,38 @@ INSERT INTO `eventos` (`id`, `tipo_evento`, `id_creador`, `fecha_inicio`, `fecha
 
 CREATE TABLE `musicos` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(255) NOT NULL,
-  `descripcion` text DEFAULT NULL,
-  `precio` decimal(10,2) DEFAULT NULL,
-  `tipo_evento` enum('boda','cena de empresa','congreso','concierto') NOT NULL,
-  `numero_contacto` varchar(20) DEFAULT NULL
+  `name` varchar(255) NOT NULL,
+  `description` text DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
+  `event_type` int(11) NOT NULL,
+  `contact_number` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `musicos`
 --
 
-INSERT INTO `musicos` (`id`, `nombre`, `descripcion`, `precio`, `tipo_evento`, `numero_contacto`) VALUES
-(1, 'Ensemble Clásico', 'Un grupo de músicos clásicos que ofrece una selección de música instrumental para ceremonias de bodas, incluyendo piezas de Bach, Mozart y otros compositores clásicos. Precio por evento.', 800.00, 'boda', '688990011'),
-(2, 'Dúo Acústico', 'Un dúo acústico que proporciona música en vivo durante la ceremonia y el cóctel de bodas, interpretando versiones acústicas de canciones populares y clásicos del folk. Precio por hora.', 500.00, 'boda', '677889900'),
-(3, 'Cantante Solista', 'Un cantante solista con acompañamiento de guitarra que ofrece una actuación íntima y emocional para la ceremonia de bodas, interpretando baladas románticas y canciones populares. Precio por evento.', 600.00, 'boda', '688001122'),
-(4, 'Orquesta de Jazz', 'Una orquesta de jazz que proporciona música en vivo durante la recepción y el banquete de bodas, interpretando estándares de jazz y canciones swing para crear un ambiente elegante y animado. Precio por hora.', 1000.00, 'boda', '688223344'),
-(5, 'Grupo de Mariachis', 'Un grupo de mariachis que ofrece una experiencia auténtica de música mexicana para animar la fiesta de bodas, interpretando rancheras, corridos y otros géneros tradicionales. Precio por hora.', 700.00, 'boda', '688223345'),
-(6, 'Cuarteto de Cuerdas', 'Un cuarteto de cuerdas que proporciona música clásica durante la ceremonia y el banquete de bodas, interpretando piezas de compositores clásicos y modernos para crear un ambiente elegante y romántico. Precio por evento.', 900.00, 'boda', '688223346'),
-(7, 'Grupo de Música Latina', 'Un grupo de música latina que ofrece una variedad de ritmos y estilos para animar la fiesta de bodas, interpretando salsa, merengue, bachata y otros géneros bailables. Precio por hora.', 800.00, 'boda', '688223347'),
-(8, 'Dúo de Violín y Piano', 'Un dúo de violín y piano que ofrece una selección de música clásica y contemporánea para la ceremonia y el cóctel de bodas, creando una atmósfera elegante y emotiva. Precio por evento.', 750.00, 'boda', '688223348'),
-(9, 'Grupo de Rock', 'Un grupo de rock que ofrece una actuación enérgica y divertida para la fiesta de bodas, interpretando versiones de rock clásico y éxitos actuales para mantener a los invitados en la pista de baile. Precio por hora.', 900.00, 'boda', '688223349'),
-(10, 'Trío de Jazz', 'Un trío de jazz que proporciona música en vivo durante el cóctel y el banquete de bodas, interpretando estándares de jazz, bossa nova y blues para crear un ambiente sofisticado y relajado. Precio por hora.', 850.00, 'boda', '688223350'),
-(11, 'Cuarteto de Cuerdas Ambiental', 'Un cuarteto de cuerdas que proporciona música clásica de fondo durante los coffee breaks y las pausas del congreso, creando un ambiente elegante y relajante para los asistentes. Precio por hora.', 600.00, 'congreso', '688990011'),
-(12, 'Pianista de Jazz', 'Un pianista de jazz que ofrece música en vivo durante las sesiones del congreso, interpretando estándares de jazz y música instrumental para añadir un toque de sofisticación al evento. Precio por hora.', 500.00, 'congreso', '677889900'),
-(13, 'Dúo de Guitarra Española', 'Un dúo de guitarra española que proporciona música en vivo durante la recepción y el almuerzo del congreso, interpretando flamenco, música latina y melodías españolas para crear un ambiente animado y festivo. Precio por hora.', 700.00, 'congreso', '688001122'),
-(14, 'DJ Ambiental', 'Un DJ que proporciona música de fondo durante las sesiones del congreso y los descansos, creando listas de reproducción personalizadas con música relajante y motivadora para mantener el ambiente adecuado. Precio por hora.', 400.00, 'congreso', '688223344'),
-(15, 'Grupo de Música Electrónica', 'Un grupo de música electrónica que ofrece una actuación en vivo durante la fiesta de clausura del congreso, interpretando sets de música electrónica y dance para animar a los asistentes y crear una atmósfera festiva. Precio por hora.', 800.00, 'congreso', '688223345'),
-(16, 'Experto en Sonido en Vivo', 'Técnico de sonido especializado en conciertos en vivo que ofrece servicios de mezcla y control de sonido durante el evento, asegurando una experiencia auditiva de alta calidad para artistas y audiencia. Precio por evento.', 800.00, 'concierto', '688990011'),
-(17, 'Ingeniero de Sonido Profesional', 'Ingeniero de sonido con experiencia en conciertos que proporciona servicios de configuración de equipos, ajuste de sonido y control de calidad durante las actuaciones en vivo, garantizando un sonido óptimo en todo momento. Precio por evento.', 700.00, 'concierto', '677889900'),
-(18, 'Técnico de Sonido y Luces', 'Técnico polivalente de sonido y luces que ofrece servicios de diseño de sonido, configuración de equipos de iluminación y control técnico durante el concierto, creando una experiencia audiovisual completa para el público. Precio por evento.', 900.00, 'concierto', '688001122'),
-(19, 'Operador de Mezcla en Directo', 'Operador de mezcla en directo con experiencia en conciertos que proporciona servicios de mezcla de sonido en tiempo real durante las actuaciones, garantizando un equilibrio sonoro adecuado y una experiencia auditiva óptima para los espectadores. Precio por evento.', 750.00, 'concierto', '688223344'),
-(20, 'Técnico de Audio Profesional', 'Técnico de audio con amplios conocimientos en conciertos en vivo que ofrece servicios de configuración de equipos, ajuste de sonido y control técnico durante el evento, asegurando un sonido impecable y una experiencia memorable para todos los presentes. Precio por evento.', 850.00, 'concierto', '688223345');
+INSERT INTO `musicos` (`id`, `name`, `description`, `price`, `event_type`, `contact_number`) VALUES
+(1, 'Ensemble Clásico', 'Un grupo de músicos clásicos que ofrece una selección de música instrumental para ceremonias de bodas, incluyendo piezas de Bach, Mozart y otros compositores clásicos. Precio por evento.', 800.00, 1, '688990011'),
+(2, 'Dúo Acústico', 'Un dúo acústico que proporciona música en vivo durante la ceremonia y el cóctel de bodas, interpretando versiones acústicas de canciones populares y clásicos del folk. Precio por hora.', 500.00, 1, '677889900'),
+(3, 'Cantante Solista', 'Un cantante solista con acompañamiento de guitarra que ofrece una actuación íntima y emocional para la ceremonia de bodas, interpretando baladas románticas y canciones populares. Precio por evento.', 600.00, 1, '688001122'),
+(4, 'Orquesta de Jazz', 'Una orquesta de jazz que proporciona música en vivo durante la recepción y el banquete de bodas, interpretando estándares de jazz y canciones swing para crear un ambiente elegante y animado. Precio por hora.', 1000.00, 1, '688223344'),
+(5, 'Grupo de Mariachis', 'Un grupo de mariachis que ofrece una experiencia auténtica de música mexicana para animar la fiesta de bodas, interpretando rancheras, corridos y otros géneros tradicionales. Precio por hora.', 700.00, 1, '688223345'),
+(6, 'Cuarteto de Cuerdas', 'Un cuarteto de cuerdas que proporciona música clásica durante la ceremonia y el banquete de bodas, interpretando piezas de compositores clásicos y modernos para crear un ambiente elegante y romántico. Precio por evento.', 900.00, 1, '688223346'),
+(7, 'Grupo de Música Latina', 'Un grupo de música latina que ofrece una variedad de ritmos y estilos para animar la fiesta de bodas, interpretando salsa, merengue, bachata y otros géneros bailables. Precio por hora.', 800.00, 1, '688223347'),
+(8, 'Dúo de Violín y Piano', 'Un dúo de violín y piano que ofrece una selección de música clásica y contemporánea para la ceremonia y el cóctel de bodas, creando una atmósfera elegante y emotiva. Precio por evento.', 750.00, 1, '688223348'),
+(9, 'Grupo de Rock', 'Un grupo de rock que ofrece una actuación enérgica y divertida para la fiesta de bodas, interpretando versiones de rock clásico y éxitos actuales para mantener a los invitados en la pista de baile. Precio por hora.', 900.00, 1, '688223349'),
+(10, 'Trío de Jazz', 'Un trío de jazz que proporciona música en vivo durante el cóctel y el banquete de bodas, interpretando estándares de jazz, bossa nova y blues para crear un ambiente sofisticado y relajado. Precio por hora.', 850.00, 1, '688223350'),
+(11, 'Cuarteto de Cuerdas Ambiental', 'Un cuarteto de cuerdas que proporciona música clásica de fondo durante los coffee breaks y las pausas del congreso, creando un ambiente elegante y relajante para los asistentes. Precio por hora.', 600.00, 3, '688990011'),
+(12, 'Pianista de Jazz', 'Un pianista de jazz que ofrece música en vivo durante las sesiones del congreso, interpretando estándares de jazz y música instrumental para añadir un toque de sofisticación al evento. Precio por hora.', 500.00, 3, '677889900'),
+(13, 'Dúo de Guitarra Española', 'Un dúo de guitarra española que proporciona música en vivo durante la recepción y el almuerzo del congreso, interpretando flamenco, música latina y melodías españolas para crear un ambiente animado y festivo. Precio por hora.', 700.00, 3, '688001122'),
+(14, 'DJ Ambiental', 'Un DJ que proporciona música de fondo durante las sesiones del congreso y los descansos, creando listas de reproducción personalizadas con música relajante y motivadora para mantener el ambiente adecuado. Precio por hora.', 400.00, 3, '688223344'),
+(15, 'Grupo de Música Electrónica', 'Un grupo de música electrónica que ofrece una actuación en vivo durante la fiesta de clausura del congreso, interpretando sets de música electrónica y dance para animar a los asistentes y crear una atmósfera festiva. Precio por hora.', 800.00, 3, '688223345'),
+(16, 'Experto en Sonido en Vivo', 'Técnico de sonido especializado en conciertos en vivo que ofrece servicios de mezcla y control de sonido durante el evento, asegurando una experiencia auditiva de alta calidad para artistas y audiencia. Precio por evento.', 800.00, 4, '688990011'),
+(17, 'Ingeniero de Sonido Profesional', 'Ingeniero de sonido con experiencia en conciertos que proporciona servicios de configuración de equipos, ajuste de sonido y control de calidad durante las actuaciones en vivo, garantizando un sonido óptimo en todo momento. Precio por evento.', 700.00, 4, '677889900'),
+(18, 'Técnico de Sonido y Luces', 'Técnico polivalente de sonido y luces que ofrece servicios de diseño de sonido, configuración de equipos de iluminación y control técnico durante el concierto, creando una experiencia audiovisual completa para el público. Precio por evento.', 900.00, 4, '688001122'),
+(19, 'Operador de Mezcla en Directo', 'Operador de mezcla en directo con experiencia en conciertos que proporciona servicios de mezcla de sonido en tiempo real durante las actuaciones, garantizando un equilibrio sonoro adecuado y una experiencia auditiva óptima para los espectadores. Precio por evento.', 750.00, 4, '688223344'),
+(20, 'Técnico de Audio Profesional', 'Técnico de audio con amplios conocimientos en conciertos en vivo que ofrece servicios de configuración de equipos, ajuste de sonido y control técnico durante el evento, asegurando un sonido impecable y una experiencia memorable para todos los presentes. Precio por evento.', 850.00, 4, '688223345');
 
 -- --------------------------------------------------------
 
@@ -216,16 +216,16 @@ INSERT INTO `musicos` (`id`, `nombre`, `descripcion`, `precio`, `tipo_evento`, `
 
 CREATE TABLE `reservas_caterings` (
   `id` int(11) NOT NULL,
-  `id_catering` int(11) DEFAULT NULL,
-  `fecha_inicio` datetime DEFAULT NULL,
-  `fecha_fin` datetime DEFAULT NULL
+  `catering_id` int(11) DEFAULT NULL,
+  `start_date` datetime DEFAULT NULL,
+  `end_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `reservas_caterings`
 --
 
-INSERT INTO `reservas_caterings` (`id`, `id_catering`, `fecha_inicio`, `fecha_fin`) VALUES
+INSERT INTO `reservas_caterings` (`id`, `catering_id`, `start_date`, `end_date`) VALUES
 (1, 1, '2024-05-10 18:00:00', '2024-05-10 19:00:00'),
 (2, 2, '2024-06-15 18:00:00', '2024-06-15 19:00:00'),
 (3, 3, '2024-07-20 19:00:00', '2024-07-20 20:00:00'),
@@ -240,16 +240,16 @@ INSERT INTO `reservas_caterings` (`id`, `id_catering`, `fecha_inicio`, `fecha_fi
 
 CREATE TABLE `reservas_espacios` (
   `id` int(11) NOT NULL,
-  `id_espacio` int(11) DEFAULT NULL,
-  `fecha_inicio` datetime DEFAULT NULL,
-  `fecha_fin` datetime DEFAULT NULL
+  `space_id` int(11) DEFAULT NULL,
+  `start_date` datetime DEFAULT NULL,
+  `end_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `reservas_espacios`
 --
 
-INSERT INTO `reservas_espacios` (`id`, `id_espacio`, `fecha_inicio`, `fecha_fin`) VALUES
+INSERT INTO `reservas_espacios` (`id`, `space_id`, `start_date`, `end_date`) VALUES
 (1, 1, '2024-05-10 09:00:00', '2024-05-10 17:00:00'),
 (2, 2, '2024-06-15 12:00:00', '2024-06-15 20:00:00'),
 (3, 3, '2024-07-20 10:00:00', '2024-07-20 18:00:00'),
@@ -264,16 +264,16 @@ INSERT INTO `reservas_espacios` (`id`, `id_espacio`, `fecha_inicio`, `fecha_fin`
 
 CREATE TABLE `reservas_musicos` (
   `id` int(11) NOT NULL,
-  `id_musico` int(11) DEFAULT NULL,
-  `fecha_inicio` datetime DEFAULT NULL,
-  `fecha_fin` datetime DEFAULT NULL
+  `musician_id` int(11) DEFAULT NULL,
+  `start_date` datetime DEFAULT NULL,
+  `end_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `reservas_musicos`
 --
 
-INSERT INTO `reservas_musicos` (`id`, `id_musico`, `fecha_inicio`, `fecha_fin`) VALUES
+INSERT INTO `reservas_musicos` (`id`, `musician_id`, `start_date`, `end_date`) VALUES
 (1, 1, '2024-05-10 19:00:00', '2024-05-10 22:00:00'),
 (2, 2, '2024-06-15 20:00:00', '2024-06-15 23:00:00'),
 (3, 3, '2024-07-20 21:00:00', '2024-07-20 23:00:00'),
@@ -288,16 +288,16 @@ INSERT INTO `reservas_musicos` (`id`, `id_musico`, `fecha_inicio`, `fecha_fin`) 
 
 CREATE TABLE `reservas_restaurantes` (
   `id` int(11) NOT NULL,
-  `id_restaurante` int(11) DEFAULT NULL,
-  `fecha_inicio` datetime DEFAULT NULL,
-  `fecha_fin` datetime DEFAULT NULL
+  `restaurant_id` int(11) DEFAULT NULL,
+  `start_date` datetime DEFAULT NULL,
+  `end_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `reservas_restaurantes`
 --
 
-INSERT INTO `reservas_restaurantes` (`id`, `id_restaurante`, `fecha_inicio`, `fecha_fin`) VALUES
+INSERT INTO `reservas_restaurantes` (`id`, `restaurant_id`, `start_date`, `end_date`) VALUES
 (1, 1, '2024-05-10 19:00:00', '2024-05-10 21:00:00'),
 (2, 2, '2024-06-15 19:00:00', '2024-06-15 22:00:00'),
 (3, 3, '2024-07-20 20:00:00', '2024-07-20 23:00:00'),
@@ -401,11 +401,11 @@ ALTER TABLE `espacios`
 --
 ALTER TABLE `eventos`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_creador` (`id_creador`),
-  ADD KEY `id_espacio` (`id_espacio`),
-  ADD KEY `id_restaurante` (`id_restaurante`),
-  ADD KEY `id_catering` (`id_catering`),
-  ADD KEY `id_musica` (`id_musica`);
+  ADD KEY `id_creador` (`creator_id`),
+  ADD KEY `id_espacio` (`space_id`),
+  ADD KEY `id_restaurante` (`restaurant_id`),
+  ADD KEY `id_catering` (`catering_id`),
+  ADD KEY `id_musica` (`musician_id`);
 
 --
 -- Indices de la tabla `musicos`
@@ -418,28 +418,28 @@ ALTER TABLE `musicos`
 --
 ALTER TABLE `reservas_caterings`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_catering` (`id_catering`);
+  ADD KEY `id_catering` (`catering_id`);
 
 --
 -- Indices de la tabla `reservas_espacios`
 --
 ALTER TABLE `reservas_espacios`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_espacio` (`id_espacio`);
+  ADD KEY `id_espacio` (`space_id`);
 
 --
 -- Indices de la tabla `reservas_musicos`
 --
 ALTER TABLE `reservas_musicos`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_musico` (`id_musico`);
+  ADD KEY `id_musico` (`musician_id`);
 
 --
 -- Indices de la tabla `reservas_restaurantes`
 --
 ALTER TABLE `reservas_restaurantes`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_restaurante` (`id_restaurante`);
+  ADD KEY `id_restaurante` (`restaurant_id`);
 
 --
 -- Indices de la tabla `restaurantes`
@@ -525,35 +525,35 @@ ALTER TABLE `usuarios`
 -- Filtros para la tabla `eventos`
 --
 ALTER TABLE `eventos`
-  ADD CONSTRAINT `eventos_ibfk_1` FOREIGN KEY (`id_creador`) REFERENCES `usuarios` (`id`),
-  ADD CONSTRAINT `eventos_ibfk_2` FOREIGN KEY (`id_espacio`) REFERENCES `espacios` (`id`),
-  ADD CONSTRAINT `eventos_ibfk_3` FOREIGN KEY (`id_restaurante`) REFERENCES `restaurantes` (`id`),
-  ADD CONSTRAINT `eventos_ibfk_4` FOREIGN KEY (`id_catering`) REFERENCES `caterings` (`id`),
-  ADD CONSTRAINT `eventos_ibfk_5` FOREIGN KEY (`id_musica`) REFERENCES `musicos` (`id`);
+  ADD CONSTRAINT `eventos_ibfk_1` FOREIGN KEY (`creator_id`) REFERENCES `usuarios` (`id`),
+  ADD CONSTRAINT `eventos_ibfk_2` FOREIGN KEY (`space_id`) REFERENCES `espacios` (`id`),
+  ADD CONSTRAINT `eventos_ibfk_3` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurantes` (`id`),
+  ADD CONSTRAINT `eventos_ibfk_4` FOREIGN KEY (`catering_id`) REFERENCES `caterings` (`id`),
+  ADD CONSTRAINT `eventos_ibfk_5` FOREIGN KEY (`musician_id`) REFERENCES `musicos` (`id`);
 
 --
 -- Filtros para la tabla `reservas_caterings`
 --
 ALTER TABLE `reservas_caterings`
-  ADD CONSTRAINT `reservas_caterings_ibfk_1` FOREIGN KEY (`id_catering`) REFERENCES `caterings` (`id`);
+  ADD CONSTRAINT `reservas_caterings_ibfk_1` FOREIGN KEY (`catering_id`) REFERENCES `caterings` (`id`);
 
 --
 -- Filtros para la tabla `reservas_espacios`
 --
 ALTER TABLE `reservas_espacios`
-  ADD CONSTRAINT `reservas_espacios_ibfk_1` FOREIGN KEY (`id_espacio`) REFERENCES `espacios` (`id`);
+  ADD CONSTRAINT `reservas_espacios_ibfk_1` FOREIGN KEY (`space_id`) REFERENCES `espacios` (`id`);
 
 --
 -- Filtros para la tabla `reservas_musicos`
 --
 ALTER TABLE `reservas_musicos`
-  ADD CONSTRAINT `reservas_musicos_ibfk_1` FOREIGN KEY (`id_musico`) REFERENCES `musicos` (`id`);
+  ADD CONSTRAINT `reservas_musicos_ibfk_1` FOREIGN KEY (`musician_id`) REFERENCES `musicos` (`id`);
 
 --
 -- Filtros para la tabla `reservas_restaurantes`
 --
 ALTER TABLE `reservas_restaurantes`
-  ADD CONSTRAINT `reservas_restaurantes_ibfk_1` FOREIGN KEY (`id_restaurante`) REFERENCES `restaurantes` (`id`);
+  ADD CONSTRAINT `reservas_restaurantes_ibfk_1` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurantes` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
