@@ -15,11 +15,7 @@ public class Event {
 
     private Integer eventType;
 
-    private String name;
-
     private int creatorId;
-
-    private String description;
 
     private Date startDate;
 
