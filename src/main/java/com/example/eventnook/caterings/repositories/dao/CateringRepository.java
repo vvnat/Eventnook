@@ -13,4 +13,5 @@ import java.util.List;
 public interface CateringRepository extends JpaRepository<Catering, Long> {
     @Query("SELECT c FROM Catering c WHERE c.eventType = ?1")
     List<Catering> findCateringByEventType(Integer eventType);
+
 }
