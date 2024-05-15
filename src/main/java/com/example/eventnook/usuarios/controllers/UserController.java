@@ -64,8 +64,4 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 
-    /*@GetMapping("/user/{id}/events")
-    public ResponseEntity<List<Event>> findEventsByUserId(@PathVariable Long id) {
-        return ResponseEntity.status(HttpStatus.OK).body(eventService.findEventsByUserId(id));
-    }*/
 }

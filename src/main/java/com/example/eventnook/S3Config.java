@@ -14,22 +14,21 @@ import org.springframework.context.annotation.Configuration;
 public class S3Config {
 
     @Value("${aws.access.key}")
-    private String awsAccessKey;
+    private String apiKey;
 
     @Value("${aws.secret.key}")
-    private String awsSecretKey;
+    private String secretKey;
+
+    @Value("${aws.s3.endpoint}")
+    private String r2Endpoint;
 
     @Bean
-    public AmazonS3 s3client() {
+    public AmazonS3 s3Client() {
 
-        BasicAWSCredentials awsCreds = new BasicAWSCredentials(awsAccessKey, awsSecretKey);
+        BasicAWSCredentials credentials = new BasicAWSCredentials(apiKey, secretKey);
 
-        var awsS3Config = AmazonS3ClientBuilder.standard()
-                .withCredentials(new AWSStaticCredentialsProvider(awsCreds))
-                .withRegion(Regions.EU_CENTRAL_1) // This field if not exist throws an exception
-                .setEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration("https://0dfbda40c694bf01514dc38c041322cf.r2.cloudflarestorage.com/eventnook", "Europe"))
-                .build();
-
-        return awsS3Config;
+        return AmazonS3ClientBuilder.standard()
+                .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(r2Endpoint, "weur"))
+                .withCredentials(new AWSStaticCredentialsProvider(credentials)).build();
     }
 }
