@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-05-2024 a las 22:10:16
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 15-05-2024 a las 14:24:42
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -92,46 +92,50 @@ CREATE TABLE `espacios` (
 --
 
 INSERT INTO `espacios` (`id`, `name`, `image`, `description`, `capacity`, `price`, `open_space`, `enclosed_space`, `event_type`, `contact_number`, `address`) VALUES
-(1, 'Salón Dorado', 'imagen1.jpg', 'Espacio elegante y espacioso para eventos especiales.', 150, 500.00, 0, 1, 0, '623154785', ''),
-(2, 'Jardín de las Rosas', 'imagen2.jpg', 'Hermoso jardín al aire libre ideal para bodas y eventos al aire libre.', 200, 700.00, 1, 0, 0, '654852365', ''),
-(3, 'Salón de Conferencias A', 'imagen3.jpg', 'Espacio perfecto para conferencias y charlas empresariales.', 100, 300.00, 0, 1, 2, '622523414', ''),
-(4, 'Sala de Exposiciones', 'imagen4.jpg', 'Espacio amplio y luminoso para exposiciones y eventos artísticos.', 300, 800.00, 0, 1, 3, '669958554', ''),
-(5, 'Terraza Panorámica', 'imagen5.jpg', 'Terraza con vistas impresionantes de la ciudad, ideal para cenas de empresa.', 80, 400.00, 1, 0, 1, '901253654', ''),
-(6, 'Salón de Eventos B', 'imagen6.jpg', 'Salón multifuncional adecuado para todo tipo de eventos sociales.', 120, 600.00, 0, 1, 0, '624587884', ''),
-(7, 'Patio de los Naranjos', 'imagen7.jpg', 'Patio encantador rodeado de naranjos para eventos al aire libre.', 150, 600.00, 1, 0, 0, '965854457', ''),
-(8, 'Salón VIP', 'imagen8.jpg', 'Espacio exclusivo con comodidades de lujo para eventos selectos.', 50, 1000.00, 0, 1, 1, '969323586', ''),
-(9, 'Sala de Conciertos A', 'imagen9.jpg', 'Sala de conciertos equipada con tecnología de última generación.', 500, 1500.00, 0, 1, 3, '674147253', ''),
-(10, 'Salón de Baile', 'imagen10.jpg', 'Amplio salón perfecto para eventos con música y baile.', 200, 800.00, 0, 1, 3, '635269532', ''),
-(11, 'Jardín de Invierno', 'imagen11.jpg', 'Jardín cubierto con calefacción para eventos en cualquier temporada.', 100, 600.00, 1, 0, 1, '601203652', ''),
-(12, 'Salón Principal', 'imagen12.jpg', 'Elegante salón para eventos formales y ceremonias especiales.', 150, 700.00, 0, 1, 0, '655202369', ''),
-(13, 'Terraza Lounge', 'imagen13.jpg', 'Terraza moderna y chic para eventos sociales y fiestas privadas.', 80, 500.00, 1, 0, 1, '685747523', ''),
-(14, 'Sala de Reuniones', 'imagen14.jpg', 'Sala íntima y profesional para reuniones de negocios y conferencias.', 30, 200.00, 0, 1, 2, '606326101', ''),
-(15, 'Sala Polivalente', 'imagen15.jpg', 'Espacio versátil adaptable a diversas configuraciones para eventos.', 80, 400.00, 0, 1, 3, '986992352', ''),
-(16, 'Sala de Juegos', 'imagen16.jpg', 'Sala de juegos equipada con entretenimiento para eventos juveniles.', 50, 300.00, 0, 1, 3, '603332125', ''),
-(17, 'Salón Elegante', 'imagen17.jpg', 'Salón clásico y elegante para bodas y eventos especiales.', 100, 600.00, 0, 1, 0, '644102352', ''),
-(18, 'Pista de Baile', 'imagen18.jpg', 'Gran pista de baile para fiestas y eventos con música en vivo.', 200, 800.00, 0, 1, 3, '685742110', ''),
-(19, 'Salón Privado', 'imagen19.jpg', 'Salón íntimo y privado para cenas exclusivas y eventos VIP.', 40, 500.00, 0, 1, 1, '635289002', ''),
-(20, 'Sala de Exposiciones B', 'imagen20.jpg', 'Amplia sala de exposiciones para eventos artísticos y culturales.', 400, 1200.00, 0, 1, 3, '645238501', ''),
-(21, 'Salón de Eventos C', 'imagen21.jpg', 'Espacio versátil con excelente iluminación y comodidades.', 150, 700.00, 0, 1, 1, '986582312', ''),
-(22, 'Terraza Verde', 'imagen22.jpg', 'Terraza arbolada y fresca ideal para eventos al aire libre.', 100, 500.00, 1, 0, 1, '963250124', ''),
-(23, 'Salón de Reuniones Ejecutivas', 'imagen23.jpg', 'Sala de reuniones equipada para eventos corporativos.', 20, 300.00, 0, 1, 2, '655241038', ''),
-(24, 'Sala de Presentaciones', 'imagen24.jpg', 'Sala moderna con capacidad para presentaciones y conferencias.', 80, 400.00, 0, 1, 2, '687856921', ''),
-(25, 'Área Lounge', 'imagen25.jpg', 'Espacio relajado y cómodo para eventos sociales y networking.', 50, 200.00, 1, 0, 1, '632588741', ''),
-(26, 'Salón Principal A', 'imagen26.jpg', 'Elegante salón con decoración clásica y ambiente refinado.', 200, 800.00, 0, 1, 0, '678910112', ''),
-(27, 'Jardín de Eventos', 'imagen27.jpg', 'Amplio jardín con zona de césped ideal para eventos al aire libre.', 300, 1000.00, 1, 0, 0, '674253881', ''),
-(28, 'Sala de Conciertos B', 'imagen28.jpg', 'Sala de conciertos con excelente acústica y capacidad para grandes audiencias.', 600, 2000.00, 0, 1, 3, '698525363', ''),
-(29, 'Salón de Celebraciones', 'imagen29.jpg', 'Espacio acogedor y versátil para celebraciones íntimas y familiares.', 80, 500.00, 0, 1, 0, '636525414', ''),
-(30, 'Terraza Chill-out', 'imagen30.jpg', 'Terraza elegante y moderna con área de descanso y barra de cócteles.', 70, 600.00, 1, 0, 1, '654456852', ''),
-(31, 'Salón de Reuniones B', 'imagen31.jpg', 'Sala de reuniones equipada con tecnología avanzada y mobiliario confortable.', 40, 300.00, 0, 1, 2, '698745236', ''),
-(32, 'Patio Central', 'imagen32.jpg', 'Patio central con diseño contemporáneo y capacidad para eventos exclusivos.', 100, 700.00, 1, 0, 0, '614258745', ''),
-(33, 'Salón de Actos', 'imagen33.jpg', 'Espacio multifuncional para actos sociales y eventos empresariales.', 150, 600.00, 0, 1, 1, '698536241', ''),
-(34, 'Sala de Exposiciones C', 'imagen34.jpg', 'Sala amplia y diáfana para exposiciones de arte y eventos culturales.', 400, 1500.00, 0, 1, 2, '936025148', ''),
-(35, 'Área de Recepción', 'imagen35.jpg', 'Espacio elegante y acogedor para recepciones y eventos de bienvenida.', 50, 400.00, 1, 0, 1, '907542368', ''),
-(36, 'Salón de Eventos D', 'imagen36.jpg', 'Salón versátil y moderno con capacidad para eventos de todo tipo.', 120, 800.00, 0, 1, 0, '604253698', ''),
-(37, 'Terraza Cubierta', 'imagen37.jpg', 'Terraza con techo retráctil para eventos al aire libre en cualquier clima.', 80, 500.00, 1, 0, 1, '924702356', ''),
-(38, 'Sala de Videoconferencias', 'imagen38.jpg', 'Sala equipada con tecnología de videoconferencia para reuniones virtuales.', 20, 300.00, 0, 1, 2, '611447723', ''),
-(39, 'Salón Principal B', 'imagen39.jpg', 'Salón principal con capacidad para eventos de gran envergadura.', 250, 900.00, 0, 1, 3, '685444258', ''),
-(40, 'Área de Descanso', 'imagen40.jpg', 'Espacio relajado con sofás y áreas de descanso para eventos informales.', 30, 200.00, 1, 0, 1, '672415368', '');
+(1, 'Salón Dorado', 'imagen1.jpg', 'Espacio elegante y espacioso para eventos especiales. Ideal para bodas, recepciones y galas formales, ofrece una atmósfera majestuosa que cautiva a los invitados.', 150, 500.00, 0, 1, 0, '623154785', ''),
+(2, 'Jardín de las Rosas', 'imagen2.jpg', 'Hermoso jardín al aire libre ideal para bodas y eventos al aire libre. Rodeado de exuberante vegetación y flores, crea un ambiente mágico y romántico para celebraciones inolvidables.', 200, 700.00, 1, 0, 0, '654852365', ''),
+(3, 'Salón de Conferencias A', 'imagen3.jpg', 'Espacio perfecto para conferencias y charlas empresariales. Equipado con tecnología de vanguardia y mobiliario ergonómico, garantiza un entorno profesional y confortable para reuniones corporativas y eventos de networking.', 100, 300.00, 0, 1, 2, '622523414', ''),
+(4, 'Sala de Exposiciones', 'imagen4.jpg', 'Espacio amplio y luminoso para exposiciones y eventos artísticos. Con paredes blancas y luz natural, realza la exhibición de obras de arte y productos, atrayendo a aficionados y compradores.', 300, 800.00, 0, 1, 3, '669958554', ''),
+(5, 'Terraza Panorámica', 'imagen5.jpg', 'Terraza con vistas impresionantes de la ciudad, ideal para cenas de empresa. Ofrece una experiencia gastronómica única con su ambiente al aire libre y panorámicas vistas urbanas, perfecto para eventos corporativos.', 80, 400.00, 1, 0, 1, '901253654', ''),
+(6, 'Salón de Eventos B', 'imagen6.jpg', 'Salón multifuncional adecuado para todo tipo de eventos sociales. Desde bodas y fiestas de cumpleaños hasta conferencias y exposiciones, este espacio versátil se adapta a cualquier ocasión con su diseño flexible y moderno.', 120, 600.00, 0, 1, 0, '624587884', ''),
+(7, 'Patio de los Naranjos', 'imagen7.jpg', 'Patio encantador rodeado de naranjos para eventos al aire libre. Con su encanto mediterráneo y aroma cítrico, crea un ambiente acogedor y fresco para celebraciones al aire libre, como bodas y cócteles.', 150, 600.00, 1, 0, 0, '965854457', ''),
+(8, 'Salón VIP', 'imagen8.jpg', 'Espacio exclusivo con comodidades de lujo para eventos selectos. Desde cenas íntimas y recepciones VIP hasta presentaciones de productos de alta gama, ofrece un entorno elegante y sofisticado para los invitados más exigentes.', 50, 1000.00, 0, 1, 1, '969323586', ''),
+(9, 'Sala de Conciertos A', 'imagen9.jpg', 'Sala de conciertos equipada con tecnología de última generación. Diseñada para ofrecer una experiencia acústica excepcional, es el escenario perfecto para conciertos, recitales y eventos musicales de todo tipo.', 500, 1500.00, 0, 1, 3, '674147253', ''),
+(10, 'Salón de Baile', 'imagen10.jpg', 'Amplio salón perfecto para eventos con música y baile. Con su amplia pista de baile y sistema de sonido envolvente, crea un ambiente festivo y animado para bodas, fiestas y eventos de baile.', 200, 800.00, 0, 1, 3, '635269532', ''),
+(11, 'Jardín de Invierno', 'imagen11.jpg', 'Jardín cubierto con calefacción para eventos en cualquier temporada. Con su diseño elegante y cálido, proporciona un oasis verde durante el invierno, ideal para bodas y eventos al aire libre durante todo el año.', 100, 600.00, 1, 0, 1, '601203652', ''),
+(12, 'Salón Principal', 'imagen12.jpg', 'Elegante salón para eventos formales y ceremonias especiales. Con su arquitectura clásica y detalles ornamentales, añade un toque de grandeza a bodas, recepciones y eventos de gala.', 150, 700.00, 0, 1, 0, '655202369', ''),
+(13, 'Terraza Lounge', 'imagen13.jpg', 'Terraza moderna y chic para eventos sociales y fiestas privadas. Con su diseño contemporáneo y mobiliario elegante, ofrece un ambiente relajado y sofisticado para cócteles, fiestas y eventos exclusivos.', 80, 500.00, 1, 0, 1, '685747523', ''),
+(14, 'Sala de Reuniones', 'imagen14.jpg', 'Sala íntima y profesional para reuniones de negocios y conferencias. Equipada con tecnología de punta y mobiliario ergonómico, proporciona un entorno productivo y confortable para discusiones empresariales y presentaciones ejecutivas.', 30, 200.00, 0, 1, 2, '606326101', ''),
+(15, 'Sala Polivalente', 'imagen15.jpg', 'Espacio versátil adaptable a diversas configuraciones para eventos. Desde reuniones de negocios y conferencias hasta exposiciones y presentaciones, este espacio polivalente se ajusta a las necesidades de cualquier evento.', 80, 400.00, 0, 1, 3, '986992352', ''),
+(16, 'Sala de Juegos', 'imagen16.jpg', 'Sala de juegos equipada con entretenimiento para eventos juveniles. Con su ambiente animado y opciones de entretenimiento, es perfecta para fiestas de cumpleaños, reuniones escolares y eventos juveniles.', 50, 300.00, 0, 1, 3, '603332125', ''),
+(17, 'Salón Elegante', 'imagen17.jpg', 'Salón clásico y elegante para bodas y eventos especiales. Con su decoración refinada y ambiente distinguido, proporciona el escenario perfecto para celebraciones memorables y ceremonias de ensueño.', 100, 600.00, 0, 1, 0, '644102352', ''),
+(18, 'Pista de Baile', 'imagen18.jpg', 'Gran pista de baile para fiestas y eventos con música en vivo. Con su amplio espacio y sistema de iluminación dinámica, invita a los invitados a bailar toda la noche en un ambiente festivo y animado.', 200, 800.00, 0, 1, 3, '685742110', ''),
+(19, 'Salón Privado', 'imagen19.jpg', 'Salón íntimo y privado para cenas exclusivas y eventos VIP. Con su ambiente exclusivo y servicios personalizados, ofrece un entorno elegante y discreto para reuniones de negocios y cenas de lujo.', 40, 500.00, 0, 1, 1, '635289002', ''),
+(20, 'Sala de Exposiciones B', 'imagen20.jpg', 'Amplia sala de exposiciones para eventos artísticos y culturales. Con su diseño diáfano y versátil, proporciona el espacio perfecto para exhibiciones de arte, ferias comerciales y eventos culturales de gran envergadura.', 400, 1200.00, 0, 1, 3, '645238501', ''),
+(21, 'Salón de Eventos C', 'imagen21.jpg', 'Espacio versátil con excelente iluminación y comodidades. Desde conferencias y presentaciones hasta fiestas y recepciones, ofrece un entorno flexible y bien equipado para una amplia gama de eventos sociales y corporativos.', 150, 700.00, 0, 1, 1, '986582312', ''),
+(22, 'Terraza Verde', 'imagen22.jpg', 'Terraza arbolada y fresca ideal para eventos al aire libre. Con su entorno natural y ambiente relajado, proporciona el escenario perfecto para celebraciones al aire libre, como bodas, cócteles y fiestas privadas.', 100, 500.00, 1, 0, 1, '963250124', ''),
+(23, 'Salón de Reuniones Ejecutivas', 'imagen23.jpg', 'Sala de reuniones equipada para eventos corporativos. Con su mobiliario ergonómico y tecnología avanzada, ofrece un entorno profesional y productivo para reuniones de negocios, presentaciones ejecutivas y conferencias corporativas.', 20, 300.00, 0, 1, 2, '655241038', ''),
+(24, 'Sala de Presentaciones', 'imagen24.jpg', 'Sala moderna con capacidad para presentaciones y conferencias. Equipada con proyector, pantalla y sistemas de sonido, proporciona un entorno dinámico y tecnológicamente avanzado para presentaciones, charlas y seminarios.', 80, 400.00, 0, 1, 2, '687856921', ''),
+(25, 'Salón Mediterráneo', 'imagen41.jpg', 'Espacio encantador inspirado en la costa mediterránea, perfecto para eventos temáticos y celebraciones al aire libre. Con su decoración marinera y vistas al mar, crea una atmósfera relajada y sofisticada para bodas, cenas y fiestas playeras.', 120, 700.00, 1, 1, 1, '674123589', 'Calle Mediterráneo, 123'),
+(26, 'Salón Principal A', 'imagen26.jpg', 'Elegante salón con decoración clásica y ambiente refinado. Desde bodas y galas hasta conferencias y lanzamientos de productos, ofrece un entorno distinguido y versátil para una amplia gama de eventos especiales.', 200, 800.00, 0, 1, 0, '678910112', ''),
+(27, 'Jardín de Eventos', 'imagen27.jpg', 'Amplio jardín con zona de césped ideal para eventos al aire libre. Con su vasta extensión y entorno natural, proporciona el escenario perfecto para bodas al aire libre, picnics corporativos y eventos comunitarios.', 300, 1000.00, 1, 0, 0, '674253881', ''),
+(28, 'Sala de Conciertos B', 'imagen28.jpg', 'Sala de conciertos con excelente acústica y capacidad para grandes audiencias. Equipada con tecnología de sonido de última generación, proporciona una experiencia auditiva inigualable para conciertos, recitales y eventos musicales de gran envergadura.', 600, 2000.00, 0, 1, 3, '698525363', ''),
+(29, 'Salón de Celebraciones', 'imagen29.jpg', 'Espacio acogedor y versátil para celebraciones íntimas y familiares. Desde cumpleaños y aniversarios hasta bautizos y fiestas familiares, ofrece un ambiente cálido y familiar para celebraciones memorables y entrañables.', 80, 500.00, 0, 1, 0, '636525414', ''),
+(30, 'Terraza Chill-out', 'imagen30.jpg', 'Terraza elegante y moderna con área de descanso y barra de cócteles. Con su mobiliario chic y ambiente relajado, invita a los invitados a disfrutar de cócteles, música y conversaciones en un entorno exclusivo y sofisticado.', 70, 600.00, 1, 0, 1, '654456852', ''),
+(31, 'Salón de Reuniones B', 'imagen31.jpg', 'Sala de reuniones equipada con tecnología avanzada y mobiliario confortable. Con su ambiente profesional y servicios personalizados, proporciona el entorno ideal para reuniones de negocios, presentaciones ejecutivas y conferencias corporativas.', 40, 300.00, 0, 1, 2, '698745236', ''),
+(32, 'Patio Central', 'imagen32.jpg', 'Patio central con diseño contemporáneo y capacidad para eventos exclusivos. Con su arquitectura moderna y atmósfera elegante, es el lugar perfecto para recepciones de gala, lanzamientos de productos y eventos corporativos de alto nivel.', 100, 700.00, 1, 0, 0, '614258745', ''),
+(33, 'Salón de Actos', 'imagen33.jpg', 'Espacio multifuncional para actos sociales y eventos empresariales. Con su diseño versátil y tecnología integrada, es adecuado para conferencias, presentaciones, galas de premios y eventos corporativos de todo tipo, ofreciendo un escenario impresionante y funcional para grandes audiencias y presentaciones de alto impacto.', 150, 600.00, 0, 1, 1, '698536241', ''),
+(34, 'Sala de Exposiciones C', 'imagen34.jpg', 'Sala amplia y diáfana para exposiciones de arte y eventos culturales. Con su diseño contemporáneo y excelente iluminación, realza la exhibición de obras de arte y proporciona un espacio inspirador para eventos culturales y artísticos.', 400, 1500.00, 0, 1, 2, '936025148', ''),
+(35, 'Área de Recepción', 'imagen35.jpg', 'Espacio elegante y acogedor para recepciones y eventos de bienvenida. Con su decoración refinada y ambiente cálido, brinda la bienvenida a los invitados con estilo y ofrece el escenario perfecto para iniciar cualquier evento con elegancia y hospitalidad.', 50, 400.00, 1, 0, 1, '907542368', ''),
+(36, 'Salón de Eventos D', 'imagen36.jpg', 'Salón versátil y moderno con capacidad para eventos de todo tipo. Desde conferencias y lanzamientos de productos hasta bodas y fiestas de gala, ofrece un espacio adaptable y bien equipado para una variedad de eventos sociales y corporativos.', 120, 800.00, 0, 1, 0, '604253698', ''),
+(37, 'Terraza Cubierta', 'imagen37.jpg', 'Terraza con techo retráctil para eventos al aire libre en cualquier clima. Con su diseño innovador y funcionalidad versátil, permite disfrutar de la belleza del aire libre sin preocuparse por las condiciones climáticas, ideal para eventos al aire libre durante todo el año.', 80, 500.00, 1, 0, 1, '924702356', ''),
+(38, 'Sala de Videoconferencias', 'imagen38.jpg', 'Sala equipada con tecnología de videoconferencia para reuniones virtuales. Con su equipamiento audiovisual y conexiones de alta velocidad, ofrece un entorno profesional y eficiente para reuniones virtuales, presentaciones a distancia y colaboraciones en línea.', 20, 300.00, 0, 1, 2, '611447723', ''),
+(39, 'Salón Principal B', 'imagen39.jpg', 'Salón principal con capacidad para eventos de gran envergadura. Desde convenciones y ferias comerciales hasta conciertos y galas benéficas, ofrece un espacio impresionante y funcional para eventos de gran escala y alto impacto.', 250, 900.00, 0, 1, 2, '685444258', ''),
+(40, 'Área de Descanso', 'imagen40.jpg', 'Espacio relajado con sofás y áreas de descanso para eventos informales. Con su ambiente acogedor y mobiliario confortable, invita a los invitados a relajarse y disfrutar de momentos de tranquilidad en medio de la actividad del evento.', 30, 200.00, 1, 0, 2, '672415368', ''),
+(41, 'Salón Mediterráneo', 'imagen41.jpg', 'Espacio encantador inspirado en la costa mediterránea, perfecto para eventos temáticos y celebraciones al aire libre. Con su decoración marinera y vistas al mar, crea una atmósfera relajada y sofisticada para bodas y fiestas playeras.', 120, 700.00, 1, 1, 0, '674123589', 'Calle Mediterráneo, 123'),
+(42, 'Sala de Degustación', 'imagen42.jpg', 'Sala íntima y elegante para degustaciones de vinos y catas gastronómicas. Con su ambiente refinado y selección de vinos de primera calidad, ofrece una experiencia sensorial única para eventos exclusivos y reuniones privadas.', 40, 300.00, 0, 1, 1, '689745632', 'Avenida del Vino, 456'),
+(43, 'Terraza del Cielo', 'imagen43.jpg', 'Terraza panorámica en lo alto de un rascacielos, con vistas impresionantes de la ciudad. Perfecta para cócteles y eventos corporativos, ofrece un ambiente exclusivo y sofisticado para celebraciones en las alturas.', 80, 800.00, 1, 0, 1, '632587412', 'Calle del Cielo, 789'),
+(45, 'Jardín de Ensueño', 'imagen45.jpg', 'Jardín exuberante y mágico, ideal para bodas de cuento de hadas y eventos al aire libre. Con su vegetación exótica y rincones pintorescos, brinda un escenario romántico y encantador para celebraciones inolvidables.', 150, 900.00, 1, 0, 0, '652147896', 'Camino del Ensueño, s/n');
 
 -- --------------------------------------------------------
 
@@ -158,14 +162,14 @@ CREATE TABLE `eventos` (
 --
 
 INSERT INTO `eventos` (`id`, `event_type`, `creator_id`, `start_date`, `end_date`, `space_id`, `restaurant_id`, `catering_id`, `musician_id`, `open_bar`, `guests_number`) VALUES
-(1, 1, 1, '2024-05-10 17:00:00', '2024-05-10 22:00:00', 1, NULL, 1, 1, 1, 100),
-(2, 2, 2, '2024-06-15 19:00:00', '2024-06-15 23:00:00', NULL, 2, NULL, NULL, 1, 50),
-(3, 3, 3, '2024-07-20 09:00:00', '2024-07-22 18:00:00', 3, NULL, 16, NULL, 0, 300),
-(4, 4, 4, '2024-08-25 19:00:00', '2024-08-25 23:00:00', 15, NULL, 23, NULL, 1, 200),
-(5, 1, 5, '2024-09-30 16:00:00', '2024-09-30 21:00:00', 7, NULL, 5, 5, 1, 150),
-(6, 2, 6, '2024-10-15 20:00:00', '2024-10-15 23:00:00', 5, NULL, 10, NULL, 1, 80),
-(7, 3, 7, '2024-11-20 09:00:00', '2024-11-22 18:00:00', 20, NULL, 18, 12, 0, 250),
-(8, 4, 8, '2024-12-25 18:00:00', '2024-12-25 22:00:00', 10, NULL, NULL, 20, 1, 180);
+(1, 0, 1, '2024-05-10 17:00:00', '2024-05-10 22:00:00', 1, NULL, 1, 1, 1, 100),
+(2, 1, 2, '2024-06-15 19:00:00', '2024-06-15 23:00:00', NULL, 2, NULL, NULL, 1, 50),
+(3, 2, 3, '2024-07-20 09:00:00', '2024-07-22 18:00:00', 3, NULL, 16, NULL, 0, 300),
+(4, 3, 4, '2024-08-25 19:00:00', '2024-08-25 23:00:00', 15, NULL, 23, NULL, 1, 200),
+(5, 0, 5, '2024-09-30 16:00:00', '2024-09-30 21:00:00', 7, NULL, 5, 5, 1, 150),
+(6, 1, 6, '2024-10-15 20:00:00', '2024-10-15 23:00:00', 5, NULL, 10, NULL, 1, 80),
+(7, 2, 7, '2024-11-20 09:00:00', '2024-11-22 18:00:00', 20, NULL, 18, 12, 0, 250),
+(8, 3, 2, '2024-12-25 18:00:00', '2024-12-25 22:00:00', 10, NULL, NULL, 20, 1, 180);
 
 -- --------------------------------------------------------
 
@@ -467,7 +471,7 @@ ALTER TABLE `caterings`
 -- AUTO_INCREMENT de la tabla `espacios`
 --
 ALTER TABLE `espacios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT de la tabla `eventos`

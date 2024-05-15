@@ -1,6 +1,5 @@
 package com.example.eventnook.reservasCaterings.services.impl;
 
-import com.example.eventnook.musicos.repositories.entities.Musician;
 import com.example.eventnook.reservasCaterings.repositories.dao.ReservaCateringRepository;
 import com.example.eventnook.reservasCaterings.repositories.entities.ReservaCatering;
 import com.example.eventnook.reservasCaterings.services.ReservaCateringService;

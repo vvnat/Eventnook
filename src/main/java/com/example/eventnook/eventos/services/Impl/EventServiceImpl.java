@@ -1,6 +1,5 @@
 package com.example.eventnook.eventos.services.Impl;
 
-import com.example.eventnook.espacios.exceptions.SpaceNotFoundException;
 import com.example.eventnook.eventos.exceptions.EventNotFoundException;
 import com.example.eventnook.eventos.repositories.dao.EventRepository;
 import com.example.eventnook.eventos.repositories.entities.Event;

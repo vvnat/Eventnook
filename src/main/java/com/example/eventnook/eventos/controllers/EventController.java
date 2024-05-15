@@ -1,7 +1,5 @@
 package com.example.eventnook.eventos.controllers;
 
-import com.example.eventnook.espacios.repositories.entities.Space;
-import com.example.eventnook.eventos.exceptions.EventNotFoundException;
 import com.example.eventnook.eventos.repositories.entities.Event;
 import com.example.eventnook.eventos.services.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
