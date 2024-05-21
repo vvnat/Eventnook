@@ -32,4 +32,6 @@ public class Event {
     private boolean open_bar;
 
     private int guestsNumber;
+
+    private boolean photographer;
 }
