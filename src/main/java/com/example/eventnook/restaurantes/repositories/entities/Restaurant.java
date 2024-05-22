@@ -18,6 +18,8 @@ public class Restaurant {
 
     private String description;
 
+    private String menu;
+
     private int capacity;
 
     private float price;
