@@ -14,4 +14,7 @@ import jakarta.transaction.Transactional;
 public interface SpaceRepository extends JpaRepository<Space, Long>{
     @Query("SELECT s FROM Space s WHERE s.eventType = ?1")
     List<Space> findSpaceByEventType(Integer eventType);
+
+    @Query("SELECT s FROM Space s WHERE s.capacity >= ?1")
+    List<Space> findByCapacity(int capacity);
 }

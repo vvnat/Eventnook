@@ -31,4 +31,9 @@ public class SpaceServiceImpl implements SpaceService{
         return spaceRepository.findById(id)
         .orElseThrow(() -> new SpaceNotFoundException(id));
     }    
+
+    @Override
+    public List<Space> findByCapacity(int capacity) {
+        return spaceRepository.findByCapacity(capacity);
+    }
 }

@@ -11,4 +11,6 @@ public interface SpaceService {
     List<Space> findByEventType(Integer eventType);
     
     Space findById(Long id);
+
+    List<Space> findByCapacity(int capacity);
 }

@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
@@ -26,4 +28,10 @@ public class RestaurantController {
     public ResponseEntity<Restaurant> findById(@PathVariable Long id) {
         return ResponseEntity.status(HttpStatus.OK).body(restaurantService.findById(id));
     }
+
+    @GetMapping("/restaurantsByCapacity/{capacity}")
+    public ResponseEntity<List<Restaurant>> findByCapacity(@PathVariable int capacity) {
+        return ResponseEntity.status(HttpStatus.OK).body(restaurantService.findByCapacity(capacity));
+    }
+    
 }

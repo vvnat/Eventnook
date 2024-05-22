@@ -26,4 +26,9 @@ public class RestaurantServiceImpl implements RestaurantService {
         return restaurantRepository.findById(id)
                 .orElseThrow(() -> new RestaurantNotFoundException(id));
     }
+
+    @Override
+    public List<Restaurant> findByCapacity(int capacity) {
+        return restaurantRepository.findByCapacity(capacity);
+    }
 }

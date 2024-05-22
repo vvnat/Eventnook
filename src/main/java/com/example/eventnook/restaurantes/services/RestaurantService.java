@@ -8,4 +8,6 @@ public interface RestaurantService {
     List<Restaurant> findAll();
 
     Restaurant findById(Long id);
+
+    List<Restaurant> findByCapacity(int capacity);
 }

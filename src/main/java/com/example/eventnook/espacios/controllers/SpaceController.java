@@ -37,4 +37,9 @@ public class SpaceController {
     public ResponseEntity<Space> findById(@PathVariable Long id) {
         return ResponseEntity.status(HttpStatus.OK).body(spaceService.findById(id));
     }
+
+    @GetMapping("/spacesByCapacity/{capacity}")
+    public ResponseEntity<List<Space>> findByCapacity(@PathVariable int capacity) {
+        return ResponseEntity.status(HttpStatus.OK).body(spaceService.findByCapacity(capacity));
+    }
 }
