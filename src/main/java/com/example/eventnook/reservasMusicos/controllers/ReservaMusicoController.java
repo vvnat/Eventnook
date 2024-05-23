@@ -26,4 +26,9 @@ public class ReservaMusicoController {
          reservaMusicoService.createReservaMusico(reservaMusico);
          return ResponseEntity.status(HttpStatus.CREATED).body(reservaMusico);
      }
+
+    @GetMapping("/reservasMusicos/{musicianId}")
+    public ResponseEntity<List<ReservaMusico>> findByIdMusico(@PathVariable Long musicianId) {
+        return ResponseEntity.status(HttpStatus.OK).body(reservaMusicoService.findByIdMusico(musicianId));
+    }
 }

@@ -21,4 +21,9 @@ public class ReservaEspacioServiceImpl implements ReservaEspacioService{
     public void createReservaEspacio(ReservaEspacio reservaEspacio) {
         reservaEspacioRepository.save(reservaEspacio);
     }
+
+    @Override
+    public List<ReservaEspacio> findByIdEspacio(Long spaceId) {
+        return reservaEspacioRepository.findByIdEspacio(spaceId);
+    }
 }

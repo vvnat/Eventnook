@@ -23,4 +23,9 @@ public class ReservaCateringImpl implements ReservaCateringService {
     public void createReservaCatering(ReservaCatering reservaCatering) {
         reservaCateringRepository.save(reservaCatering);
     }
+
+    @Override
+    public List<ReservaCatering> findByIdCatering(Long cateringId) {
+        return reservaCateringRepository.findByIdCatering(cateringId);
+    }
 }

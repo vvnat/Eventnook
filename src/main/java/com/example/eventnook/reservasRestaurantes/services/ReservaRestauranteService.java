@@ -8,4 +8,6 @@ public interface ReservaRestauranteService {
     List<ReservaRestaurante> findAll();
 
     void createReservaRestaurante(ReservaRestaurante reservaRestaurante);
+
+    List<ReservaRestaurante> findByIdRestaurante(Long restaurantId);
 }

@@ -21,4 +21,9 @@ public class ReservaRestauranteServiceImpl implements ReservaRestauranteService 
     public void createReservaRestaurante(ReservaRestaurante reservaRestaurante) {
         reservaRestauranteRepository.save(reservaRestaurante);
     }
+
+    @Override
+    public List<ReservaRestaurante> findByIdRestaurante(Long restaurantId) {
+        return reservaRestauranteRepository.findByIdRestaurante(restaurantId);
+    }
 }

@@ -8,4 +8,6 @@ public interface ReservaMusicoService {
     List<ReservaMusico> findAll();
 
     void createReservaMusico(ReservaMusico reservaMusico);
+
+    List<ReservaMusico> findByIdMusico(Long musicianId);
 }

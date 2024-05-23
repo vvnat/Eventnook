@@ -21,4 +21,9 @@ public class ReservaMusicoServiceImpl implements ReservaMusicoService {
     public void createReservaMusico(ReservaMusico reservaMusico) {
         reservaMusicoRepository.save(reservaMusico);
     }
+
+    @Override
+    public List<ReservaMusico> findByIdMusico(Long musicianId) {
+        return reservaMusicoRepository.findByIdMusico(musicianId);
+    }
 }

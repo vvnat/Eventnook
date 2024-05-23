@@ -27,4 +27,9 @@ public class ReservaRestauranteController {
          return ResponseEntity.status(HttpStatus.CREATED).body(reservaRestaurante);
      }
 
+    @GetMapping("/reservasRestaurantes/{restaurantId}")
+    public ResponseEntity<List<ReservaRestaurante>> findByIdRestaurante(@PathVariable Long restaurantId) {
+        return ResponseEntity.status(HttpStatus.OK).body(reservaRestauranteService.findByIdRestaurante(restaurantId));
+    }
+
 }

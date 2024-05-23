@@ -8,4 +8,6 @@ public interface ReservaEspacioService {
     List<ReservaEspacio> findAll();
 
     void createReservaEspacio(ReservaEspacio reservaEspacio);
+
+    List<ReservaEspacio> findByIdEspacio(Long spaceId);
 }

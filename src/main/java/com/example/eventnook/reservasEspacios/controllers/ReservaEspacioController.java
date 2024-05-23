@@ -27,4 +27,9 @@ public class ReservaEspacioController {
          reservaEspacioService.createReservaEspacio(reservaEspacio);
          return ResponseEntity.status(HttpStatus.CREATED).body(reservaEspacio);
      }
+
+    @GetMapping("/reservasEspacios/{spaceId}")
+    public ResponseEntity<List<ReservaEspacio>> findByIdEspacio(@PathVariable Long spaceId) {
+        return ResponseEntity.status(HttpStatus.OK).body(reservaEspacioService.findByIdEspacio(spaceId));
+    }
 }
