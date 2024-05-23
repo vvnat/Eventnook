@@ -6,6 +6,7 @@ import com.example.eventnook.reservasEspacios.services.ReservaEspacioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.util.List;
 
 @Service
@@ -28,7 +29,7 @@ public class ReservaEspacioServiceImpl implements ReservaEspacioService{
     }
 
     @Override
-    public List<ReservaEspacio> findByDateRange(java.sql.Date startDate, java.sql.Date endDate) {
+    public List<ReservaEspacio> findByDateRange(Date startDate, Date endDate) {
         return reservaEspacioRepository.findByDateRange(startDate, endDate);
     }
 }
