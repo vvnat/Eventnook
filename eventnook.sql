@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-05-2024 a las 13:24:39
+-- Tiempo de generación: 23-05-2024 a las 09:24:09
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -93,14 +93,14 @@ CREATE TABLE `espacios` (
 
 INSERT INTO `espacios` (`id`, `name`, `image`, `description`, `capacity`, `price`, `open_space`, `enclosed_space`, `event_type`, `contact_number`, `address`) VALUES
 (1, 'Salón Dorado', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/bodas.webp', 'Espacio elegante y espacioso para eventos especiales. Ideal para bodas, recepciones y galas formales, ofrece una atmósfera majestuosa que cautiva a los invitados.', 150, 500.00, 0, 1, 0, '623154785', ''),
-(2, 'Jardín de las Rosas', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/jardin%20boda%202.jpg', 'Hermoso jardín al aire libre ideal para bodas y eventos al aire libre. Rodeado de exuberante vegetación y flores, crea un ambiente mágico y romántico para celebraciones inolvidables.', 200, 700.00, 1, 0, 0, '654852365', ''),
-(3, 'Salón de Conferencias A', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/conferencia%202.jpg', 'Espacio perfecto para conferencias y charlas empresariales. Equipado con tecnología de vanguardia y mobiliario ergonómico, garantiza un entorno profesional y confortable para reuniones corporativas y eventos de networking.', 100, 300.00, 0, 1, 2, '622523414', ''),
-(4, 'Sala de Exposiciones', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/expo%20(2).jpg', 'Espacio amplio y luminoso para exposiciones y eventos artísticos. Con paredes blancas y luz natural, realza la exhibición de obras de arte y productos, atrayendo a aficionados y compradores.', 300, 800.00, 0, 1, 3, '669958554', ''),
-(5, 'Terraza Panorámica', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/terraza%20mar.jpg', 'Terraza con vistas impresionantes del mar, ideal para cenas de empresa. Ofrece una experiencia gastronómica única con su ambiente al aire libre y panorámicas vistas agradables, perfecto para eventos corporativos.', 80, 400.00, 1, 0, 1, '901253654', ''),
-(6, 'Salón de Eventos B', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/multiusos.jpg', 'Salón multifuncional adecuado para todo tipo de eventos sociales. Desde bodas y fiestas de cumpleaños hasta conferencias y exposiciones, este espacio versátil se adapta a cualquier ocasión con su diseño flexible y moderno.', 120, 600.00, 0, 1, 0, '624587884', ''),
+(2, 'Jardín de las Rosas', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/jardin%20boda%202.jpg', 'Hermoso jardín al aire libre ideal para bodas y eventos al aire libre. Rodeado de exuberante vegetación y flores, crea un ambiente mágico y romántico para celebraciones inolvidables.', 200, 700.00, 1, 0, 0, '654852365', 'Calle Colón nº3, Meliana'),
+(3, 'Salón de Conferencias A', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/conferencia%202.webp', 'Espacio perfecto para conferencias y charlas empresariales. Equipado con tecnología de vanguardia y mobiliario ergonómico, garantiza un entorno profesional y confortable para reuniones corporativas y eventos de networking.', 100, 300.00, 0, 1, 2, '622523414', 'Av. del Cid nº136, València'),
+(4, 'Sala de Exposiciones', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/expo%20(2).jpg', 'Espacio amplio y luminoso para exposiciones y eventos artísticos. Con paredes blancas y luz natural, realza la exhibición de obras de arte y productos, atrayendo a aficionados y compradores.', 300, 800.00, 0, 1, 3, '669958554', 'Calle Joaquín Costa nº12, Paterna'),
+(5, 'Terraza Panorámica', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/terraza%20mar.jpg', 'Terraza con vistas impresionantes del mar, ideal para cenas de empresa. Ofrece una experiencia gastronómica única con su ambiente al aire libre y panorámicas vistas agradables, perfecto para eventos corporativos.', 80, 400.00, 1, 0, 1, '901253654', 'Carrer d\'Eugènia Viñes nº17, València'),
+(6, 'Salón de Eventos B', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/multiusos.jpg', 'Salón multifuncional adecuado para todo tipo de eventos sociales. Desde bodas y fiestas de cumpleaños hasta conferencias y exposiciones, este espacio versátil se adapta a cualquier ocasión con su diseño flexible y moderno.', 120, 600.00, 0, 1, 0, '624587884', 'Calle Colón nº62, Burjassot'),
 (7, 'Patio de los Naranjos', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/jardin%20boda.jpg', 'Patio encantador rodeado de naranjos para eventos al aire libre. Con su encanto mediterráneo y aroma cítrico, crea un ambiente acogedor y fresco para celebraciones al aire libre, como bodas y cócteles.', 150, 600.00, 1, 0, 0, '965854457', ''),
-(9, 'Sala de Conciertos A', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/concierto%202.jpg', 'Sala de conciertos equipada con tecnología de última generación. Diseñada para ofrecer una experiencia acústica excepcional, es el escenario perfecto para conciertos, recitales y eventos musicales de todo tipo.', 500, 1500.00, 0, 1, 3, '674147253', 'Av. Albert Einstein nº28, Valencia'),
-(11, 'Jardín de Invierno', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/lago%20boda.jpg', 'Jardín cubierto con calefacción para eventos en cualquier temporada. Con su diseño elegante y cálido, proporciona un oasis verde durante el invierno, ideal para bodas y eventos al aire libre durante todo el año.', 100, 600.00, 1, 0, 1, '601203652', ''),
+(9, 'Sala de Conciertos A', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/concierto-2.webp', 'Sala de conciertos equipada con tecnología de última generación. Diseñada para ofrecer una experiencia acústica excepcional, es el escenario perfecto para conciertos, recitales y eventos musicales de todo tipo.', 500, 1500.00, 0, 1, 3, '674147253', 'Av. Albert Einstein nº28, Valencia'),
+(11, 'Jardín de Invierno', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/lago%20boda.jpg', 'Jardín cubierto con calefacción para eventos en cualquier temporada. Con su diseño elegante y cálido, proporciona un oasis verde durante el invierno, ideal para bodas y eventos al aire libre durante todo el año.', 100, 600.00, 1, 0, 1, '601203652', 'Calle Ausiàs March nº12, Alboraia'),
 (12, 'Salón Principal', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/sala%20teatro.jpg', 'Elegante salón para eventos formales y ceremonias especiales. Con su arquitectura clásica y detalles ornamentales, añade un toque de grandeza a bodas, recepciones y eventos de gala.', 150, 700.00, 0, 1, 0, '655202369', ''),
 (13, 'Terraza Lounge', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/terraza%20lounge.jpg', 'Terraza moderna y chic para eventos sociales y fiestas privadas. Con su diseño contemporáneo y mobiliario elegante, ofrece un ambiente relajado y sofisticado para cócteles, fiestas y eventos exclusivos.', 80, 500.00, 1, 0, 1, '685747523', ''),
 (14, 'Sala de Reuniones', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/sala%20reuniones.jpg', 'Sala íntima y profesional para reuniones de negocios y conferencias. Equipada con tecnología de punta y mobiliario ergonómico, proporciona un entorno productivo y confortable para discusiones empresariales y presentaciones ejecutivas.', 30, 200.00, 0, 1, 2, '606326101', ''),
@@ -109,14 +109,14 @@ INSERT INTO `espacios` (`id`, `name`, `image`, `description`, `capacity`, `price
 (22, 'Terraza Verde', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/terraza%20mediterranea.jpg', 'Terraza arbolada y fresca ideal para eventos al aire libre. Con su entorno natural y ambiente relajado, proporciona el escenario perfecto para celebraciones al aire libre, como bodas, cócteles y fiestas privadas.', 100, 500.00, 1, 0, 1, '963250124', ''),
 (23, 'Salón de Reuniones Ejecutivas', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/sala%20reuniones%20formales.jpg', 'Sala de reuniones equipada para eventos corporativos. Con su mobiliario ergonómico y tecnología avanzada, ofrece un entorno profesional y productivo para reuniones de negocios, presentaciones ejecutivas y conferencias corporativas.', 20, 300.00, 0, 1, 2, '655241038', ''),
 (24, 'Sala de Presentaciones', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/conferencia.jpg', 'Sala moderna con capacidad para presentaciones y conferencias. Equipada con proyector, pantalla y sistemas de sonido, proporciona un entorno dinámico y tecnológicamente avanzado para presentaciones, charlas y seminarios.', 80, 400.00, 0, 1, 2, '687856921', ''),
-(25, 'Salón Elegante', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/boda-interior-con-musica.webp', 'Espacio elegante y encantador, pensado para bodas amplias. Cuenta con un gran espacio acogedor, además de una zona reservada para que la música de tu evento se escuche desde cada rincón.', 120, 700.00, 1, 1, 1, '674123589', 'Calle Mediterráneo, 123'),
+(25, 'Salón Elegante', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/boda-interior-con-musica.webp', 'Espacio elegante y encantador, pensado para bodas amplias. Cuenta con un gran espacio acogedor, además de una zona reservada para que la música de tu evento se escuche desde cada rincón.', 120, 700.00, 1, 1, 1, '674123589', 'Calle Mediterráneo nº123'),
 (26, 'Salón Principal A', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/sala%20polivalente%202.jpg', 'Elegante salón con decoración clásica y ambiente refinado. Desde bodas y galas hasta conferencias y lanzamientos de productos, ofrece un entorno distinguido y versátil para una amplia gama de eventos especiales.', 200, 800.00, 0, 1, 0, '678910112', ''),
 (27, 'Jardín de Eventos', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/jardin%20general.jpg', 'Amplio jardín con zona de césped ideal para eventos al aire libre. Con su vasta extensión y entorno natural, proporciona el escenario perfecto para bodas al aire libre, picnics corporativos y eventos comunitarios.', 300, 1000.00, 1, 0, 0, '674253881', ''),
-(28, 'Sala de Conciertos B', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/concierto.jpg', 'Sala de conciertos con excelente acústica y capacidad para grandes audiencias. Equipada con tecnología de sonido de última generación, proporciona una experiencia auditiva inigualable para conciertos, recitales y eventos musicales de gran envergadura.', 600, 2000.00, 0, 1, 3, '698525363', ''),
+(28, 'Sala de Conciertos B', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/concierto_1.webp', 'Sala de conciertos con excelente acústica y capacidad para grandes audiencias. Equipada con tecnología de sonido de última generación, proporciona una experiencia auditiva inigualable para conciertos, recitales y eventos musicales de gran envergadura.', 600, 2000.00, 0, 1, 3, '698525363', ''),
 (29, 'Salón de Celebraciones', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/sala%20polivalente%202.jpg', 'Espacio acogedor y versátil para celebraciones íntimas y familiares. Desde cumpleaños y aniversarios hasta bautizos y fiestas familiares, ofrece un ambiente cálido y familiar para celebraciones memorables y entrañables.', 80, 500.00, 0, 1, 0, '636525414', ''),
 (31, 'Salón de Reuniones B', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/sala%20reuniones%20formales%20oscura.jpg', 'Sala de reuniones equipada con tecnología avanzada y mobiliario confortable. Con su ambiente profesional y servicios personalizados, proporciona el entorno ideal para reuniones de negocios, presentaciones ejecutivas y conferencias corporativas.', 40, 300.00, 0, 1, 2, '698745236', ''),
 (33, 'Salón pequeño', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/interior.jpg', 'Espacio multifuncional para actos sociales y eventos empresariales. Con su diseño versátil y tecnología integrada, es adecuado para conferencias, presentaciones, galas de premios y eventos corporativos de todo tipo, ofreciendo un escenario impresionante y funcional para grandes audiencias y presentaciones de alto impacto.', 150, 600.00, 0, 1, 1, '698536241', ''),
-(34, 'Sala de Exposiciones C', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/conferencia%20(2).jpg', 'Sala amplia y diáfana para exposiciones de arte y eventos culturales. Con su diseño contemporáneo y excelente iluminación, realza la exhibición de obras de arte y proporciona un espacio inspirador para eventos culturales y artísticos.', 400, 1500.00, 0, 1, 2, '936025148', ''),
+(34, 'Sala de Exposiciones C', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/sala%20de%20exposiciones%20c.webp', 'Sala amplia y diáfana para exposiciones de arte y eventos culturales. Con su diseño contemporáneo y excelente iluminación, realza la exhibición de obras de arte y proporciona un espacio inspirador para eventos culturales y artísticos.', 400, 1500.00, 0, 1, 2, '936025148', ''),
 (35, 'Área de Recepción', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/recepcion.jpg', 'Espacio elegante y acogedor para recepciones y eventos de bienvenida. Con su decoración refinada y ambiente cálido, brinda la bienvenida a los invitados con estilo y ofrece el escenario perfecto para iniciar cualquier evento con elegancia y hospitalidad.', 50, 400.00, 1, 0, 1, '907542368', ''),
 (38, 'Sala de Videoconferencias', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/sala%20reuniones%20formales%20oscura.jpg', 'Sala equipada con tecnología de videoconferencia para reuniones virtuales. Con su equipamiento audiovisual y conexiones de alta velocidad, ofrece un entorno profesional y eficiente para reuniones virtuales, presentaciones a distancia y colaboraciones en línea.', 20, 300.00, 0, 1, 2, '611447723', ''),
 (40, 'Área de Descanso', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/sala%20descanso%20sof%C3%A1s.jpg', 'Espacio relajado con sofás y áreas de descanso para eventos informales. Con su ambiente acogedor y mobiliario confortable, invita a los invitados a relajarse y disfrutar de momentos de tranquilidad en medio de la actividad del evento.', 30, 200.00, 1, 0, 2, '672415368', ''),
@@ -139,22 +139,23 @@ CREATE TABLE `eventos` (
   `catering_id` int(11) DEFAULT NULL,
   `musician_id` int(11) DEFAULT NULL,
   `open_bar` tinyint(1) DEFAULT NULL,
-  `guests_number` int(11) DEFAULT NULL
+  `guests_number` int(11) DEFAULT NULL,
+  `photographer` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `eventos`
 --
 
-INSERT INTO `eventos` (`id`, `event_type`, `creator_id`, `start_date`, `end_date`, `space_id`, `restaurant_id`, `catering_id`, `musician_id`, `open_bar`, `guests_number`) VALUES
-(1, 0, 1, '2024-05-10 17:00:00', '2024-05-10 22:00:00', 41, NULL, 1, 1, 1, 100),
-(2, 1, 2, '2024-06-15 19:00:00', '2024-06-15 23:00:00', NULL, 2, NULL, NULL, 1, 50),
-(3, 2, 3, '2024-07-20 09:00:00', '2024-07-22 18:00:00', 3, NULL, 16, NULL, 0, 300),
-(4, 3, 4, '2024-08-25 19:00:00', '2024-08-25 23:00:00', 15, NULL, 23, NULL, 1, 200),
-(5, 0, 5, '2024-09-30 16:00:00', '2024-09-30 21:00:00', 7, NULL, 5, 5, 1, 150),
-(6, 1, 6, '2024-10-15 20:00:00', '2024-10-15 23:00:00', 5, NULL, 10, NULL, 1, 80),
-(7, 2, 7, '2024-11-20 09:00:00', '2024-11-22 18:00:00', 20, NULL, 18, 12, 0, 250),
-(8, 3, 1, '2024-12-25 18:00:00', '2024-12-25 22:00:00', 9, NULL, NULL, 20, 1, 180);
+INSERT INTO `eventos` (`id`, `event_type`, `creator_id`, `start_date`, `end_date`, `space_id`, `restaurant_id`, `catering_id`, `musician_id`, `open_bar`, `guests_number`, `photographer`) VALUES
+(1, 0, 1, '2024-05-10 17:00:00', '2024-05-10 22:00:00', 41, NULL, 1, 1, 1, 100, 1),
+(2, 1, 2, '2024-06-15 19:00:00', '2024-06-15 23:00:00', NULL, 2, NULL, NULL, 1, 50, 0),
+(3, 2, 3, '2024-07-20 09:00:00', '2024-07-22 18:00:00', 3, NULL, 16, NULL, 0, 300, 0),
+(4, 3, 4, '2024-08-25 19:00:00', '2024-08-25 23:00:00', 15, NULL, 23, NULL, 1, 200, 0),
+(5, 0, 5, '2024-09-30 16:00:00', '2024-09-30 21:00:00', 7, NULL, 5, 5, 1, 150, 0),
+(6, 1, 6, '2024-10-15 20:00:00', '2024-10-15 23:00:00', 5, NULL, 10, NULL, 1, 80, 1),
+(7, 2, 7, '2024-11-20 09:00:00', '2024-11-22 18:00:00', 20, NULL, 18, 12, 0, 250, 0),
+(8, 3, 1, '2024-12-25 18:00:00', '2024-12-25 22:00:00', 9, NULL, NULL, 20, 1, 180, 0);
 
 -- --------------------------------------------------------
 
@@ -304,29 +305,30 @@ CREATE TABLE `restaurantes` (
   `name` varchar(255) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   `description` text DEFAULT NULL,
+  `menu` varchar(500) DEFAULT NULL,
   `capacity` int(11) DEFAULT NULL,
   `price` decimal(10,2) DEFAULT NULL,
   `contact_number` varchar(20) DEFAULT NULL,
-  `address` varchar(255) NOT NULL
+  `address` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `restaurantes`
 --
 
-INSERT INTO `restaurantes` (`id`, `name`, `image`, `description`, `capacity`, `price`, `contact_number`, `address`) VALUES
-(1, 'Restaurante La Terraza', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/terraza%20restaurante.jpg', 'Restaurante con terraza al aire libre y excelente cocina mediterránea.', 80, 40.00, '912345678', ''),
-(2, 'El Rincón de María', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/comida%20gambas.jpg', 'Acogedor restaurante familiar con especialidades caseras.', 50, 30.00, '934567890', ''),
-(3, 'La Parrilla del Sur', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/bar-restaurante.webp', 'Carnes a la parrilla y platos tradicionales en un ambiente rústico.', 100, 50.00, '910987654', ''),
-(4, 'Cafetería Central', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/cafeteria.jpg', 'Cafetería con variedad de bocadillos, pasteles y café recién hecho.', 40, 20.00, '923456789', ''),
-(5, 'Taberna El Olivo', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/bar.webp', 'Taberna típica con tapas y vinos de la región en un ambiente acogedor.', 60, 35.00, '931234567', ''),
-(6, 'Restaurante La Fuente', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/restaurant-449952_640.webp', 'Restaurante con comida internacional y terraza junto a una fuente.', 120, 60.00, '918765432', ''),
-(7, 'Pizzería La Italiana', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/pizzeria.jpg', 'Pizzas artesanales y pasta fresca en un ambiente italiano.', 70, 25.00, '944567890', ''),
-(11, 'Restaurante Vegano Verde', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/terraza%20mediterranea.jpg', 'Restaurante vegano con platos saludables y opciones sin gluten.', 40, 35.00, '945678901', ''),
-(12, 'Bar de Tapas El Andaluz', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/comida%20restaurante.jpg', 'Bar de tapas con especialidades andaluzas y ambiente animado.', 60, 30.00, '915432109', ''),
-(15, 'Sushi Bar Sakura', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/sushi.jpg', 'Sushi fresco y sashimi en un ambiente japonés moderno.', 50, 40.00, '939876543', ''),
-(18, 'Restaurante de Mariscos La Mar', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/restaurante%20nocturno.jpg', 'Bar de mariscos frescos y pescado del día en un ambiente marinero.', 60, 55.00, '913456789', ''),
-(20, 'Restaurante Gastronómico El Cielo', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/restaurante%20normal.jpg', 'Restaurante de alta cocina con menú degustación y vistas panorámicas.', 40, 100.00, '917654321', '');
+INSERT INTO `restaurantes` (`id`, `name`, `image`, `description`, `menu`, `capacity`, `price`, `contact_number`, `address`) VALUES
+(1, 'Restaurante La Terraza', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/terraza%20restaurante.jpg', 'Restaurante con terraza al aire libre y excelente cocina mediterránea.', '- Ensalada de pulpo a la gallega con pimentón de la Vera.\n- Paella de mariscos.\n- Tartar de atún rojo con aguacate y mango.\n- Lubina a la sal con verduras a la parrilla.', 80, 40.00, '912345678', ''),
+(2, 'El Rincón de María', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/comida-gambas.webp', 'Acogedor restaurante familiar con especialidades caseras.', '- Cocido madrileño.\n- Albóndigas caseras en salsa de tomate.\n- Tortilla de patatas con cebolla caramelizada.\n- Pisto manchego con huevo frito.', 50, 30.00, '934567890', ''),
+(3, 'La Parrilla del Sur', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/bar-restaurante.webp', 'Carnes a la parrilla y platos tradicionales en un ambiente rústico.', '- Chuletón de buey a la parrilla.\n- Asado de tira con chimichurri.\n- Provoleta a la parrilla con orégano.\n- Empanadas criollas de carne.', 100, 50.00, '910987654', ''),
+(4, 'Cafetería Central', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/cafeteria.webp', 'Cafetería con variedad de bocadillos, pasteles y café recién hecho.', '- Bocadillo de jamón ibérico y tomate.\n- Croissants rellenos de chocolate.\n- Tarta de manzana casera.\n- Café latte con leche de almendra.', 40, 20.00, '923456789', ''),
+(5, 'Taberna El Olivo', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/bar.webp', 'Taberna típica con tapas y vinos de la región en un ambiente acogedor.', '- Tortilla española de patatas y cebolla.\n- Patatas bravas con alioli.\n- Jamón ibérico con pan tumaca.\n- Boquerones en vinagre.', 60, 35.00, '931234567', ''),
+(6, 'Restaurante La Fuente', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/restaurant-449952_640.webp', 'Restaurante con comida internacional y terraza junto a una fuente.', '- Ceviche de corvina con leche de tigre.\n- Filete mignon con salsa de vino tinto.\n- Risotto de hongos trufado.\n- Sopa de cebolla gratinada.', 120, 60.00, '918765432', ''),
+(7, 'Pizzería La Italiana', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/pizzeria.jpg', 'Pizzas artesanales y pasta fresca en un ambiente italiano.', '- Pizza Margherita con albahaca fresca.\n- Tagliatelle al pesto genovés.\n- Calzone de jamón y queso.\n- Tiramisu tradicional.', 70, 25.00, '944567890', ''),
+(11, 'Restaurante Vegano Verde', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/terraza%20mediterranea.jpg', 'Restaurante vegano con platos saludables y opciones sin gluten.', '- Ensalada de quinoa con aguacate y granada.\n- Lasagna de verduras con bechamel vegana.\n- Hamburguesa de garbanzos y espinacas.\n- Brownie de chocolate sin gluten.', 40, 35.00, '945678901', ''),
+(12, 'Bar de Tapas El Andaluz', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/comida%20restaurante.jpg', 'Bar de tapas con especialidades andaluzas y ambiente animado.', '- Salmorejo cordobés.\n- Gambas al ajillo.\n- Flamenquín de jamón y queso.\n- Choco frito.', 60, 30.00, '915432109', ''),
+(15, 'Sushi Bar Sakura', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/sushi.jpg', 'Sushi fresco y sashimi en un ambiente japonés moderno.', '- Sushi de salmón y aguacate.\n- Sashimi de atún.\n- Tempura de verduras.\n- Maki de pepino y cangrejo.', 50, 40.00, '939876543', ''),
+(18, 'Restaurante de Mariscos La Mar', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/restaurante%20nocturno.jpg', 'Bar de mariscos frescos y pescado del día en un ambiente marinero.', '- Pulpo a la gallega.\n- Mariscada con langosta, gambas y mejillones.\n- Almejas a la marinera.\n- Merluza a la plancha con salsa verde.', 60, 55.00, '913456789', ''),
+(20, 'Restaurante Gastronómico El Cielo', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/restaurante%20normal.jpg', 'Restaurante de alta cocina con menú degustación y vistas panorámicas.', '- Foie gras con reducción de Pedro Ximénez.\n- Lomo de venado con puré de castañas.\n- Raviolis de langosta con espuma de marisco.\n- Soufflé de chocolate con corazón líquido.', 40, 100.00, '917654321', '');
 
 -- --------------------------------------------------------
 
@@ -350,8 +352,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `username`, `name`, `last_name`, `email`, `password`, `image`, `created_at`) VALUES
-(1, 'user1', 'Juan', 'Pérez González', 'juan@example.com', 'abc123', 'foto1.jpg', '2024-04-28 22:00:00'),
-(2, 'user2', 'María', 'López Martínez', 'maria@example.com', 'clave456', 'foto2.jpg', '2024-04-28 22:00:00'),
+(1, 'user1', 'Juan', 'Pérez González', 'juan@example.com', 'abc123', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/avatar-312160_640.png', '2024-04-28 22:00:00'),
+(2, 'user2', 'María', 'López Martínez', 'maria@example.com', 'clave456', 'https://pub-075bb5be9b9a4349baac38abf6b858f4.r2.dev/avatar-312160_640.png', '2024-04-28 22:00:00'),
 (3, 'jose89', 'José', 'García Fernández', 'jose@example.com', 'password789', NULL, '2024-04-28 22:00:00'),
 (4, 'ana22', 'Ana', 'Rodríguez Pérez', 'ana@example.com', '123abc', 'foto3.jpg', '2024-04-28 22:00:00'),
 (5, 'luisa74', 'Luisa', 'Sánchez García', 'luisa@example.com', 'contraseña321', NULL, '2024-04-28 22:00:00'),
@@ -359,7 +361,9 @@ INSERT INTO `usuarios` (`id`, `username`, `name`, `last_name`, `email`, `passwor
 (7, 'laura', 'Laura', 'Martínez López', 'laura@example.com', 'password123', NULL, '2024-04-28 22:00:00'),
 (8, 'carlos', 'Carlos', 'Fernández Pérez', 'carlos@example.com', 'pass123', 'foto5.jpg', '2024-04-28 22:00:00'),
 (9, 'sara', 'Sara', 'Gómez Ruiz', 'sara@example.com', 'password456', NULL, '2024-04-28 22:00:00'),
-(10, 'david', 'David', 'Jiménez Martín', 'david@example.com', 'pass456', 'foto6.jpg', '2024-04-28 22:00:00');
+(10, 'david', 'David', 'Jiménez Martín', 'david@example.com', 'pass456', 'foto6.jpg', '2024-04-28 22:00:00'),
+(11, 'vvnat', 'Natalia', 'Risueño', 'nrisuenosantiago@gmail.com', 'abc123456', NULL, '2024-05-21 12:14:02'),
+(12, 'alumno123', 'Alumno', 'Alumno', 'alumno@iescamp.es', 'alumno123', NULL, '2024-05-21 12:23:13');
 
 --
 -- Índices para tablas volcadas
@@ -496,7 +500,7 @@ ALTER TABLE `restaurantes`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Restricciones para tablas volcadas
