@@ -29,14 +29,19 @@ public class ReservaEspacioController {
          return ResponseEntity.status(HttpStatus.CREATED).body(reservaEspacio);
      }
 
+
    /* @GetMapping("/reservasEspacios/{spaceId}")
     public ResponseEntity<List<ReservaEspacio>> findByIdEspacio(@PathVariable Long spaceId) {
         return ResponseEntity.status(HttpStatus.OK).body(reservaEspacioService.findByIdEspacio(spaceId));
     } */
 
-    @GetMapping("/reservasEspacios/{startDate}/{endDate}")
+   @GetMapping("/reservasEspacios/{startDate}/{endDate}")
     public ResponseEntity<List<ReservaEspacio>> findByDate(@PathVariable Date startDate, @PathVariable Date endDate) {
         return ResponseEntity.status(HttpStatus.OK).body(reservaEspacioService.findByDateRange(startDate, endDate));
     }
 
+   @PostMapping("/reservasEspacios/findByDateRange")
+   public ResponseEntity<List<ReservaEspacio>> findByDateRange(@RequestBody Date startDate, @RequestBody Date endDate) {
+       return ResponseEntity.status(HttpStatus.OK).body(reservaEspacioService.findByDateRange(startDate, endDate));
+   }
 }
