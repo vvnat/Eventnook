@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Date;
 import java.util.List;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -28,8 +29,13 @@ public class ReservaCateringController {
         return ResponseEntity.status(HttpStatus.CREATED).body(reservaCatering);
     }
 
-    @GetMapping("/reservasCaterings/{cateringId}")
+   /* @GetMapping("/reservasCaterings/{cateringId}")
     public ResponseEntity<List<ReservaCatering>> findByIdCatering(@PathVariable Long cateringId) {
         return ResponseEntity.status(HttpStatus.OK).body(reservaCateringService.findByIdCatering(cateringId));
+    } */
+
+    @GetMapping("/reservasCaterings/{startDate}/{endDate}")
+    public ResponseEntity<List<ReservaCatering>> findByDate(@PathVariable Date startDate, @PathVariable Date endDate) {
+        return ResponseEntity.status(HttpStatus.OK).body(reservaCateringService.findByDateRange(startDate, endDate));
     }
 }

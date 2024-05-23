@@ -6,6 +6,7 @@ import com.example.eventnook.reservasCaterings.services.ReservaCateringService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.util.List;
 
 @Service
@@ -27,5 +28,10 @@ public class ReservaCateringImpl implements ReservaCateringService {
     @Override
     public List<ReservaCatering> findByIdCatering(Long cateringId) {
         return reservaCateringRepository.findByIdCatering(cateringId);
+    }
+
+    @Override
+    public List<ReservaCatering> findByDateRange(Date startDate, Date endDate) {
+        return reservaCateringRepository.findByDateRange(startDate, endDate);
     }
 }

@@ -26,4 +26,9 @@ public class ReservaEspacioServiceImpl implements ReservaEspacioService{
     public List<ReservaEspacio> findByIdEspacio(Long spaceId) {
         return reservaEspacioRepository.findByIdEspacio(spaceId);
     }
+
+    @Override
+    public List<ReservaEspacio> findByDateRange(java.sql.Date startDate, java.sql.Date endDate) {
+        return reservaEspacioRepository.findByDateRange(startDate, endDate);
+    }
 }
