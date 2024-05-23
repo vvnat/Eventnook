@@ -36,4 +36,9 @@ public class SpaceServiceImpl implements SpaceService{
     public List<Space> findByCapacity(int capacity) {
         return spaceRepository.findByCapacity(capacity);
     }
+
+    @Override
+    public List<Space> findByEventTypeAndCapacity(Integer eventType, int capacity) {
+        return spaceRepository.findByEventTypeAndCapacity(eventType, capacity);
+    }
 }

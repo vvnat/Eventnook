@@ -42,4 +42,10 @@ public class SpaceController {
     public ResponseEntity<List<Space>> findByCapacity(@PathVariable int capacity) {
         return ResponseEntity.status(HttpStatus.OK).body(spaceService.findByCapacity(capacity));
     }
+
+    @GetMapping("/spacesFiltered/{eventType}/{capacity}")
+    public ResponseEntity<List<Space>> findByEventTypeAndCapacity(@PathVariable Integer eventType, @PathVariable int capacity) {
+        return ResponseEntity.status(HttpStatus.OK).body(spaceService.findByEventTypeAndCapacity(eventType, capacity));
+    }
+
 }
