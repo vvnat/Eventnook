@@ -2,6 +2,8 @@ package com.example.eventnook.reservasEspacios.controllers;
 
 import com.example.eventnook.reservasEspacios.repositories.entities.ReservaEspacio;
 import com.example.eventnook.reservasEspacios.services.ReservaEspacioService;
+
+import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,12 +38,12 @@ public class ReservaEspacioController {
     } */
 
    @GetMapping("/reservasEspacios/{startDate}/{endDate}")
-    public ResponseEntity<List<ReservaEspacio>> findByDate(@PathVariable Date startDate, @PathVariable Date endDate) {
+    public ResponseEntity<List<ReservaEspacio>> findByDate(@PathVariable DateTime startDate, @PathVariable DateTime endDate) {
         return ResponseEntity.status(HttpStatus.OK).body(reservaEspacioService.findByDateRange(startDate, endDate));
     }
 
    @PostMapping("/reservasEspacios/findByDateRange")
-   public ResponseEntity<List<ReservaEspacio>> findByDateRange(@RequestBody Date startDate, @RequestBody Date endDate) {
+   public ResponseEntity<List<ReservaEspacio>> findByDateRange(@RequestBody DateTime startDate, @RequestBody DateTime endDate) {
        return ResponseEntity.status(HttpStatus.OK).body(reservaEspacioService.findByDateRange(startDate, endDate));
    }
 }

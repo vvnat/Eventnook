@@ -5,6 +5,8 @@ import com.example.eventnook.reservasEspacios.repositories.entities.ReservaEspac
 import java.sql.Date;
 import java.util.List;
 
+import org.joda.time.DateTime;
+
 public interface ReservaEspacioService {
     List<ReservaEspacio> findAll();
 
@@ -12,5 +14,5 @@ public interface ReservaEspacioService {
 
     List<ReservaEspacio> findByIdEspacio(Long spaceId);
 
-    List<ReservaEspacio> findByDateRange(Date startDate, Date endDate);
+    List<ReservaEspacio> findByDateRange(DateTime startDate, DateTime endDate);
 }
