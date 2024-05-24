@@ -3,13 +3,12 @@ package com.example.eventnook.reservasEspacios.controllers;
 import com.example.eventnook.reservasEspacios.repositories.entities.ReservaEspacio;
 import com.example.eventnook.reservasEspacios.services.ReservaEspacioService;
 
-import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -38,12 +37,12 @@ public class ReservaEspacioController {
     } */
 
    @GetMapping("/reservasEspacios/{startDate}/{endDate}")
-    public ResponseEntity<List<ReservaEspacio>> findByDate(@PathVariable DateTime startDate, @PathVariable DateTime endDate) {
+    public ResponseEntity<List<ReservaEspacio>> findByDate(@PathVariable LocalDateTime startDate, @PathVariable LocalDateTime endDate) {
         return ResponseEntity.status(HttpStatus.OK).body(reservaEspacioService.findByDateRange(startDate, endDate));
     }
 
    @PostMapping("/reservasEspacios/findByDateRange")
-   public ResponseEntity<List<ReservaEspacio>> findByDateRange(@RequestBody DateTime startDate, @RequestBody DateTime endDate) {
+   public ResponseEntity<List<ReservaEspacio>> findByDateRange(@RequestBody LocalDateTime startDate, @RequestBody LocalDateTime endDate) {
        return ResponseEntity.status(HttpStatus.OK).body(reservaEspacioService.findByDateRange(startDate, endDate));
    }
 }

@@ -3,7 +3,7 @@ package com.example.eventnook.reservasEspacios.repositories.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import org.joda.time.DateTime;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -15,7 +15,7 @@ public class ReservaEspacio {
 
     private Long spaceId;
 
-    private DateTime startDate;
+    private LocalDateTime startDate;
 
-    private DateTime endDate;
+    private LocalDateTime endDate;
 }

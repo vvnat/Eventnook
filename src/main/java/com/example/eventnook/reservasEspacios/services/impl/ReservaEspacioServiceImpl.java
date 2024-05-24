@@ -4,11 +4,10 @@ import com.example.eventnook.reservasEspacios.repositories.dao.ReservaEspacioRep
 import com.example.eventnook.reservasEspacios.repositories.entities.ReservaEspacio;
 import com.example.eventnook.reservasEspacios.services.ReservaEspacioService;
 
-import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -31,7 +30,7 @@ public class ReservaEspacioServiceImpl implements ReservaEspacioService{
     }
 
     @Override
-    public List<ReservaEspacio> findByDateRange(DateTime startDate, DateTime endDate) {
+    public List<ReservaEspacio> findByDateRange(LocalDateTime startDate, LocalDateTime endDate) {
         return reservaEspacioRepository.findByDateRange(startDate, endDate);
     }
 }
