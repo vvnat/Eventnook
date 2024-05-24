@@ -3,7 +3,7 @@ package com.example.eventnook.reservasRestaurantes.repositories.dao;
 import com.example.eventnook.reservasRestaurantes.repositories.entities.ReservaRestaurante;
 import jakarta.transaction.Transactional;
 
-import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -17,5 +17,5 @@ public interface ReservaRestauranteRepository extends JpaRepository<ReservaResta
     List<ReservaRestaurante> findByIdRestaurante(Long restaurantId);
 
     @Query("SELECT r FROM ReservaRestaurante r WHERE r.startDate >= ?1 AND r.endDate <= ?2")
-    List<ReservaRestaurante> findByDateRange(Date startDate, Date endDate);
+    List<ReservaRestaurante> findByDateRange(LocalDateTime startDate, LocalDateTime endDate);
 }

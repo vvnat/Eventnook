@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -29,7 +30,7 @@ public class ReservaRestauranteServiceImpl implements ReservaRestauranteService 
     }
 
     @Override
-    public List<ReservaRestaurante> findByDateRange(Date startDate, Date endDate) {
+    public List<ReservaRestaurante> findByDateRange(LocalDateTime startDate, LocalDateTime endDate) {
         return reservaRestauranteRepository.findByDateRange(startDate, endDate);
     }
 }

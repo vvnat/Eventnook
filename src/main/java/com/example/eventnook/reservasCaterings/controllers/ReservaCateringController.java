@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -35,7 +36,7 @@ public class ReservaCateringController {
     } */
 
     @GetMapping("/reservasCaterings/{startDate}/{endDate}")
-    public ResponseEntity<List<ReservaCatering>> findByDate(@PathVariable Date startDate, @PathVariable Date endDate) {
+    public ResponseEntity<List<ReservaCatering>> findByDate(@PathVariable LocalDateTime startDate, @PathVariable LocalDateTime endDate) {
         return ResponseEntity.status(HttpStatus.OK).body(reservaCateringService.findByDateRange(startDate, endDate));
     }
 }

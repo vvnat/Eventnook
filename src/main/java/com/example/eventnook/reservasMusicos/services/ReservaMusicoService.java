@@ -2,7 +2,7 @@ package com.example.eventnook.reservasMusicos.services;
 
 import com.example.eventnook.reservasMusicos.repositories.entity.ReservaMusico;
 
-import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface ReservaMusicoService {
@@ -12,5 +12,5 @@ public interface ReservaMusicoService {
 
     List<ReservaMusico> findByIdMusico(Long musicianId);
 
-    List<ReservaMusico> findByDateRange(Date startDate, Date endDate);
+    List<ReservaMusico> findByDateRange(LocalDateTime startDate, LocalDateTime endDate);
 }

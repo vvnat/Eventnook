@@ -3,7 +3,7 @@ package com.example.eventnook.reservasCaterings.repositories.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -16,7 +16,7 @@ public class ReservaCatering {
 
     private Long cateringId;
 
-    private Date startDate;
+    private LocalDateTime startDate;
 
-    private Date endDate;
+    private LocalDateTime endDate;
 }

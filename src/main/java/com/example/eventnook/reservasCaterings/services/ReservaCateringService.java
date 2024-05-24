@@ -2,7 +2,7 @@ package com.example.eventnook.reservasCaterings.services;
 
 import com.example.eventnook.reservasCaterings.repositories.entities.ReservaCatering;
 
-import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface ReservaCateringService {
@@ -12,5 +12,5 @@ public interface ReservaCateringService {
 
     List<ReservaCatering> findByIdCatering(Long cateringId);
 
-    List<ReservaCatering> findByDateRange(Date startDate, Date endDate);
+    List<ReservaCatering> findByDateRange(LocalDateTime startDate, LocalDateTime endDate);
 }

@@ -3,7 +3,7 @@ package com.example.eventnook.eventos.repositories.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -17,9 +17,9 @@ public class Event {
 
     private int creatorId;
 
-    private Date startDate;
+    private LocalDateTime startDate;
 
-    private Date endDate;
+    private LocalDateTime endDate;
 
     private Integer spaceId;
 
