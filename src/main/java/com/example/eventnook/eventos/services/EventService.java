@@ -10,4 +10,6 @@ public interface EventService {
     List<Event> findByCreatorId(Long creatorId);
 
     Event findById(Long id);
+
+    void createEvent(Event event);
 }

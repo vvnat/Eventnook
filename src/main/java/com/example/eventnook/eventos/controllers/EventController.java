@@ -26,4 +26,10 @@ public class EventController {
     public ResponseEntity<Event> findById(@PathVariable Long id) {
         return ResponseEntity.status(HttpStatus.OK).body(eventService.findById(id));
     }
+
+    @PostMapping("/event/create")
+    public ResponseEntity<Event> createEvent(@RequestBody Event event) {
+        eventService.createEvent(event);
+        return ResponseEntity.status(HttpStatus.CREATED).body(event);
+    }
 }

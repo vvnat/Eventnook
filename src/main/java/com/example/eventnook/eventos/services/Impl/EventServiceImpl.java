@@ -29,4 +29,9 @@ public class EventServiceImpl implements EventService {
         return eventRepository.findById(id)
                 .orElseThrow(() -> new EventNotFoundException(id));
     }
+
+    @Override
+    public void createEvent(Event event) {
+        eventRepository.save(event);
+    }
 }
