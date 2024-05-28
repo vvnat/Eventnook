@@ -17,6 +17,11 @@ public class EventController {
     @Autowired
     private EventService eventService;
 
+    @GetMapping("/events")
+    public ResponseEntity<List<Event>> findAll() {
+        return ResponseEntity.status(HttpStatus.OK).body(eventService.findAll());
+    }
+
     @GetMapping("/events/{id}")
     public ResponseEntity<List<Event>> findByCreatorId(@PathVariable Long id) {
         return ResponseEntity.status(HttpStatus.OK).body(eventService.findByCreatorId(id));
