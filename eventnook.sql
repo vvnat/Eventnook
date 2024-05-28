@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-05-2024 a las 09:24:09
+-- Tiempo de generación: 28-05-2024 a las 10:01:25
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -157,6 +157,38 @@ INSERT INTO `eventos` (`id`, `event_type`, `creator_id`, `start_date`, `end_date
 (7, 2, 7, '2024-11-20 09:00:00', '2024-11-22 18:00:00', 20, NULL, 18, 12, 0, 250, 0),
 (8, 3, 1, '2024-12-25 18:00:00', '2024-12-25 22:00:00', 9, NULL, NULL, 20, 1, 180, 0);
 
+--
+-- Disparadores `eventos`
+--
+DELIMITER $$
+CREATE TRIGGER `after_event_insert` AFTER INSERT ON `eventos` FOR EACH ROW BEGIN
+    -- Insertar reserva para el espacio
+    IF NEW.space_id IS NOT NULL THEN
+        INSERT INTO reservas_espacios (space_id, start_date, end_date)
+        VALUES (NEW.space_id, NEW.start_date, NEW.end_date);
+    END IF;
+
+    -- Insertar reserva para el restaurante
+    IF NEW.restaurant_id IS NOT NULL THEN
+        INSERT INTO reservas_restaurantes (restaurant_id, start_date, end_date)
+        VALUES (NEW.restaurant_id, NEW.start_date, NEW.end_date);
+    END IF;
+
+    -- Insertar reserva para el catering
+    IF NEW.catering_id IS NOT NULL THEN
+        INSERT INTO reservas_caterings (catering_id, start_date, end_date)
+        VALUES (NEW.catering_id, NEW.start_date, NEW.end_date);
+    END IF;
+
+    -- Insertar reserva para el músico
+    IF NEW.musician_id IS NOT NULL THEN
+        INSERT INTO reservas_musicos (musician_id, start_date, end_date)
+        VALUES (NEW.musician_id, NEW.start_date, NEW.end_date);
+    END IF;
+END
+$$
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
@@ -186,7 +218,7 @@ INSERT INTO `musicos` (`id`, `name`, `description`, `price`, `event_type`, `cont
 (7, 'Grupo de Música Latina', 'Un grupo de música latina que ofrece una variedad de ritmos y estilos para animar la fiesta de bodas, interpretando salsa, merengue, bachata y otros géneros bailables. Precio por hora.', 800.00, 0, '688223347'),
 (8, 'Dúo de Violín y Piano', 'Un dúo de violín y piano que ofrece una selección de música clásica y contemporánea para la ceremonia y el cóctel de bodas, creando una atmósfera elegante y emotiva. Precio por evento.', 750.00, 0, '688223348'),
 (9, 'Grupo de Rock', 'Un grupo de rock que ofrece una actuación enérgica y divertida para la fiesta de bodas, interpretando versiones de rock clásico y éxitos actuales para mantener a los invitados en la pista de baile. Precio por hora.', 900.00, 0, '688223349'),
-(10, 'Trío de Jazz', 'Un trío de jazz que proporciona música en vivo durante el cóctel y el banquete de bodas, interpretando estándares de jazz, bossa nova y blues para crear un ambiente sofisticado y relajado. Precio por hora.', 850.00, 0, '688223350'),
+(10, 'Trío de Jazz', 'Un trío de jazz que proporciona música en vivo durante el cóctel y el banquete de bodas, interpretando estándares de jazz, bossa nova y blues para crear un ambiente sofisticado y relajado. Precio por hora.', 850.00, 1, '688223350'),
 (11, 'Cuarteto de Cuerdas Ambiental', 'Un cuarteto de cuerdas que proporciona música clásica de fondo durante los coffee breaks y las pausas del congreso, creando un ambiente elegante y relajante para los asistentes. Precio por hora.', 600.00, 2, '688990011'),
 (12, 'Pianista de Jazz', 'Un pianista de jazz que ofrece música en vivo durante las sesiones del congreso, interpretando estándares de jazz y música instrumental para añadir un toque de sofisticación al evento. Precio por hora.', 500.00, 2, '677889900'),
 (13, 'Dúo de Guitarra Española', 'Un dúo de guitarra española que proporciona música en vivo durante la recepción y el almuerzo del congreso, interpretando flamenco, música latina y melodías españolas para crear un ambiente animado y festivo. Precio por hora.', 700.00, 2, '688001122'),
